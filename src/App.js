@@ -1,12 +1,21 @@
 import './App.css';
 import Navbar from './components/Navbar';
-import SuperLotoList from './components/SuperLotoList';
+import { Routes, Route } from 'react-router-dom';
+import SuperLoto from './components/SuperLoto';
+import SayisalLoto from './components/SayisalLoto';
+import OnNumara from './components/OnNumara';
+import SansTopu from './components/SansTopu';
 
 function App() {
   return (
-    <div className="App">
+    <div>
       <Navbar />
-      <SuperLotoList />
+      <Routes>
+        <Route path='sayisalloto' exact element={<SayisalLoto />} />
+        <Route path='superloto' exact element={<SuperLoto/>} />
+        <Route path='onnumara' exact element={<OnNumara />} />
+        <Route path='sanstopu' exact element={<SansTopu />} />
+      </Routes>
     </div>
   );
 }
