@@ -1,0 +1,16 @@
+
+.navbarIconButton {
+    margin-right: auto;
+    color: white !important;
+}
+
+.navbarStackContainer {
+    display: flex;
+    justify-content: center;
+    flex-grow: 1; 
+}
+
+.navbarButton {
+    color: white !important; 
+    margin: 0 8px;
+}
