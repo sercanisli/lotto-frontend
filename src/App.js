@@ -11,6 +11,7 @@ function App() {
     <div>
       <Navbar />
       <Routes>
+        <Route path='/' />
         <Route path='sayisalloto' exact element={<SayisalLoto />} />
         <Route path='superloto' exact element={<SuperLoto/>} />
         <Route path='onnumara' exact element={<OnNumara />} />
