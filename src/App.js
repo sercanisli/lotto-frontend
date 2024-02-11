@@ -5,6 +5,7 @@ import SuperLoto from './components/SuperLoto';
 import SayisalLoto from './components/SayisalLoto';
 import OnNumara from './components/OnNumara';
 import SansTopu from './components/SansTopu';
+import SuperLotoList from './components/SuperLotoList';
 
 function App() {
   return (
@@ -17,6 +18,7 @@ function App() {
         <Route path='onnumara' exact element={<OnNumara />} />
         <Route path='sanstopu' exact element={<SansTopu />} />
       </Routes>
+      <SuperLotoList />
     </div>
   );
 }

@@ -13,7 +13,6 @@ const superLotoApi = createApi({
             fetchSuperLoto:builder.query({
                 providesTags:['SuperLoto'],
                 query: (page) => {
-                    // debugger;
                     return {
                         url :`/api/superloto?pageSize=${page.pageSize}&pageNumber=${page.pageNumber}&fields=${page.fields}`,
                         method:'GET',
