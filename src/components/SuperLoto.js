@@ -5,10 +5,20 @@ import Paper from '@mui/material/Paper';
 import Grid from '@mui/material/Grid';
 import SuperLotoGetRandom from './SuperLotoGetRandom';
 import SuperLotoItem from './SuperLotoItem';
+import { useFetchSuperLotoQuery } from '../store/apis/superLotoApi';
+import '../styles/superLoto.css';
 
 
 function SuperLoto() {
 
+    const page = {
+        pageSize:5,
+        pageNumber:15,
+        fields:'date, numbers'
+      }
+      
+        const {data, isError, isFetching} = useFetchSuperLotoQuery(page);
+        console.log(data);
 
     const Item = styled(Paper)(({ theme }) => ({
         backgroundColor: theme.palette.mode === 'dark' ? '#1A2027' : '#fff',
@@ -26,7 +36,11 @@ function SuperLoto() {
                 </Grid>
                 <Grid item xs={12} md={7}>
                     <Item>
-                        <SuperLotoItem />
+                        {
+                            data.map((superLoto) => {
+                                return <SuperLotoItem key={superLoto.id} superLoto = {superLoto} />
+                            })
+                        }
                     </Item>
                 </Grid>
             </Grid>
