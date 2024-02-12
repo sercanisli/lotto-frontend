@@ -13,12 +13,16 @@ function SuperLoto() {
 
     const page = {
         pageSize:5,
-        pageNumber:15,
-        fields:'date, numbers'
+        pageNumber:15
       }
       
         const {data, isError, isFetching} = useFetchSuperLotoQuery(page);
-        console.log(data);
+          console.log(data)
+
+        if (isFetching ) {
+            return <div>Loading...</div>;
+        }
+    
 
     const Item = styled(Paper)(({ theme }) => ({
         backgroundColor: theme.palette.mode === 'dark' ? '#1A2027' : '#fff',

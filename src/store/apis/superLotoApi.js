@@ -14,7 +14,7 @@ const superLotoApi = createApi({
                 providesTags:['SuperLoto'],
                 query: (page) => {
                     return {
-                        url :`/api/superloto?pageSize=${page.pageSize}&pageNumber=${page.pageNumber}&fields=${page.fields}`,
+                        url :`/api/superloto?pageSize=${page.pageSize}&pageNumber=${page.pageNumber}`,
                         method:'GET',
                     };
                 },
