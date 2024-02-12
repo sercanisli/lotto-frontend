@@ -7,6 +7,7 @@ const superLotoApi = createApi({
         fetchFn: (...args) => {
             return fetch(...args);
         },
+        
     }),
     endpoints(builder) {
         return {
@@ -57,4 +58,4 @@ const superLotoApi = createApi({
 });
 
 export const { useFetchSuperLotoQuery, useAddSuperLotoMutation, useRemoveSuperLotoMutation } = superLotoApi;
-export {superLotoApi};
+export { superLotoApi };

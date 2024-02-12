@@ -7,6 +7,7 @@ import SuperLotoGetRandom from './SuperLotoGetRandom';
 import SuperLotoItem from './SuperLotoItem';
 import { useFetchSuperLotoQuery } from '../store/apis/superLotoApi';
 import '../styles/superLoto.css';
+import Pagination, { paginationClasses } from '@mui/material/Pagination';
 
 
 function SuperLoto() {
@@ -17,8 +18,6 @@ function SuperLoto() {
       }
       
         const {data, isError, isFetching} = useFetchSuperLotoQuery(page);
-          console.log(data)
-
         if (isFetching ) {
             return <div>Loading...</div>;
         }
@@ -46,6 +45,7 @@ function SuperLoto() {
                             })
                         }
                     </Item>
+                    <Pagination count={10} color="primary" />
                 </Grid>
             </Grid>
         </Box>
