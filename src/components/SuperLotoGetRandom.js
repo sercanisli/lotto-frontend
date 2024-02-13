@@ -1,8 +1,14 @@
+import { Stack, Button } from '@mui/material'
 import React from 'react'
 
 function SuperLotoGetRandom() {
   return (
-    <div>SuperLotoGetRandom</div>
+    <Stack>
+      <Stack>Numbers</Stack>
+      <Stack>
+        <Button variant='contained'>RASTGELE NUMARA</Button>
+      </Stack>
+    </Stack>
   )
 }
 

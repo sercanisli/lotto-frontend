@@ -14,4 +14,4 @@ export const store = configureStore({
 
 setupListeners(store.dispatch);
 
-export { useFetchSuperLotoQuery, useAddSuperLotoMutation, useRemoveSuperLotoMutation } from './apis/superLotoApi';
+export { useFetchSuperLotoQuery, useAddSuperLotoMutation, useRemoveSuperLotoMutation, useGetRandomNumbersQuery } from './apis/superLotoApi';

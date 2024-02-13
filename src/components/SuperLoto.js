@@ -67,13 +67,15 @@ function SuperLoto() {
         <Box >
             <Grid className='container' container spacing={2}>
                 <Grid item xs={12} md={6}>
-                    <Item><SuperLotoGetRandom/></Item>
+                    <Typography className='headlines' variant='h4'>Kazandıracak Numaralar</Typography>
+                    <Item><SuperLotoGetRandom /></Item>
                 </Grid>
                 <Grid item xs={12} md={6}>
+                    <Typography className='headlines' variant='h4'>Son Çekiliş</Typography>
                     <Item><SuperLotoLastItem lastSuperLoto={lastOne}/></Item>
                 </Grid>
                 <Grid item xs={12} md={12} >
-                    <Typography className='allNumbers'>Tüm Çekilişler</Typography>
+                    <Typography className='headlines' variant='h5'>Tüm Çekilişler</Typography>
                     <Pagination className='paginate' count={totalPage} color="primary" page={selectedPage}  onChange={handlePageChange}/>
                     <Item>
                         {

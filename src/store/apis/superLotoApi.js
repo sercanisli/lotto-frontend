@@ -23,6 +23,15 @@ const superLotoApi = createApi({
                     };
                 },
             }),
+            getRandomNumbers:builder.query({
+                providesTags:['SuperLoto'],
+                query: () => {
+                    return {
+                        url: '/api/superloto/GetRandomNumbersForSuperLotoAsync',
+                        method:'GET'
+                    };
+                },
+            }),
             addSuperLoto:builder.mutation({
                 invalidatesTags: () => {
                     return [{type: 'SuperLoto'}];
@@ -60,5 +69,5 @@ const superLotoApi = createApi({
     },
 });
 
-export const { useFetchSuperLotoQuery, useAddSuperLotoMutation, useRemoveSuperLotoMutation } = superLotoApi;
+export const { useFetchSuperLotoQuery, useAddSuperLotoMutation, useRemoveSuperLotoMutation, useGetRandomNumbersQuery } = superLotoApi;
 export { superLotoApi };
