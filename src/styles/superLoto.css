@@ -1,3 +1,19 @@
+.container {
+    padding: 0px 200px;
+}
+
 .grid {
     margin-bottom: 25px;
+}
+
+.allNumbers {
+    display: flex;
+    justify-content: center;
+    margin-top: 50px;
+}
+
+.paginate {
+    display: flex;
+    justify-content: center;
+    margin-top: 25px;
 }

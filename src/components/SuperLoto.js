@@ -9,29 +9,35 @@ import { useFetchSuperLotoQuery } from '../store/apis/superLotoApi';
 import '../styles/superLoto.css';
 import Pagination, { paginationClasses } from '@mui/material/Pagination';
 import axios from 'axios';
+import SuperLotoLastItem from './SuperLotoLastItem';
+import { Typography } from '@mui/material';
 
 function SuperLoto() {
 
     const [totalPage, setTotalPage] = useState(null);
     const [selectedPage, setSelectedPage] = useState(1);
+    const [lastOne, setLastOne] = useState(null);
 
     const handlePageChange = (event, page) => {
+        event.preventDefault();
         setSelectedPage(page);
     };
 
-
     useEffect(() => {
-        axios.get('https://localhost:7135/api/superloto?pageSize=10&pageNumber=1', {
+        axios.get(`https://localhost:7135/api/superloto?pageSize=${page.pageSize}&pageNumber=${page.pageNumber}`, {
             headers: {
                 'Accept':'application/json'
             }
         })
           .then(response => {
-            const xPaginationHeader = response.headers['X-Pagination'];
+            const lastOne = response.data[0];
+            setLastOne(lastOne);
+
+            const xPaginationHeader = response.headers['x-pagination'];
             const xPaginationData = JSON.parse(xPaginationHeader);
             const totalPage = xPaginationData.TotalPage;
+
             setTotalPage(totalPage);
-            console.log(totalPage);
           })
           .catch(error => {
             console.error('Error fetching data:', error);
@@ -40,7 +46,7 @@ function SuperLoto() {
 
 
     const page = {
-        pageSize:7,
+        pageSize:10,
         pageNumber:selectedPage
       }
       
@@ -59,11 +65,16 @@ function SuperLoto() {
       }));
   return (
         <Box >
-            <Grid container spacing={2}>
-                <Grid item xs={12} md={5}>
+            <Grid className='container' container spacing={2}>
+                <Grid item xs={12} md={6}>
                     <Item><SuperLotoGetRandom/></Item>
                 </Grid>
-                <Grid item xs={12} md={7}>
+                <Grid item xs={12} md={6}>
+                    <Item><SuperLotoLastItem lastSuperLoto={lastOne}/></Item>
+                </Grid>
+                <Grid item xs={12} md={12} >
+                    <Typography className='allNumbers'>Tüm Çekilişler</Typography>
+                    <Pagination className='paginate' count={totalPage} color="primary" page={selectedPage}  onChange={handlePageChange}/>
                     <Item>
                         {
                             data.map((superLoto) => {
@@ -71,7 +82,6 @@ function SuperLoto() {
                             })
                         }
                     </Item>
-                    <Pagination count={totalPage} color="primary" page={selectedPage}  onChange={handlePageChange}/>
                 </Grid>
             </Grid>
         </Box>
