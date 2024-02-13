@@ -3,11 +3,14 @@ import { createApi, fetchBaseQuery } from '@reduxjs/toolkit/query/react';
 const superLotoApi = createApi({
     reducerPath:'superLoto',
     baseQuery: fetchBaseQuery({
-        baseUrl:'https://localhost:7135/',
+        baseUrl:'https://localhost:7135',
+        prepareHeaders: (headers, { getState }) => {
+            headers['Content-Type'] = 'application/json';
+            return headers;
+        },
         fetchFn: (...args) => {
             return fetch(...args);
         },
-        
     }),
     endpoints(builder) {
         return {
