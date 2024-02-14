@@ -1,4 +1,4 @@
-import { Stack, Button, Skeleton } from '@mui/material'
+import { Stack, Button, Skeleton, Typography } from '@mui/material'
 import React from 'react'
 import { useGetRandomNumbersQuery } from '../store/apis/superLotoApi';
 import { useState } from 'react';
@@ -16,6 +16,7 @@ function SuperLotoGetRandom() {
       setIsLoading(false); 
     });
   };
+  console.log(data);
   
   return (
     <Stack>
@@ -29,6 +30,11 @@ function SuperLotoGetRandom() {
             <p key={index}></p>
           ))
         )}
+      </Stack>
+      <Stack>
+        <Typography>
+          <p>{data.date} tarihinde kazanan numaralar ile %{data.matchRate} oranında eşleşiyor.</p>
+        </Typography>
       </Stack>
       <Stack>
         <Button onClick={handleClick} variant='contained'>RASTGELE NUMARA</Button>
