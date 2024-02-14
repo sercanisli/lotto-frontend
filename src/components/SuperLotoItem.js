@@ -3,6 +3,7 @@ import { Stack, Skeleton, Box, Card, CardActions, CardContent, CardMedia, Typogr
 import image from '../assets/superlotoLogo.jpg';
 import '../styles/superLotoItem.css';
 
+
 function SuperLotoItem({superLoto}) {
   return (
     <Card className='card'>

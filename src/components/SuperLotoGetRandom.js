@@ -8,6 +8,7 @@ import '../styles/superLotoGetRandom.css';
 function SuperLotoGetRandom() {
 
   const { data, isError, isFetching, refetch } = useGetRandomNumbersQuery();
+  console.log(data);
   const [isLoading, setIsLoading] = useState(false);
 
   const handleClick = () => {
@@ -16,8 +17,7 @@ function SuperLotoGetRandom() {
       setIsLoading(false); 
     });
   };
-  console.log(data);
-  
+
   return (
     <Stack>
       <Stack direction="row" className='numbers'>
@@ -33,7 +33,10 @@ function SuperLotoGetRandom() {
       </Stack>
       <Stack>
         <Typography>
-          <p>{data.date} tarihinde kazanan numaralar ile %{data.matchRate} oranında eşleşiyor.</p>
+          {data && data.date ? (
+            <p>{data.date} tarihinde kazanan numaralar ile %{data.matchRate} oranında eşleşiyor.</p>
+          ) : (<p></p>)
+          }
         </Typography>
       </Stack>
       <Stack>

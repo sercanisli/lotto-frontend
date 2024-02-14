@@ -3,7 +3,6 @@ import React from 'react';
 import '../styles/superLotoLastItem.css';
 
 function SuperLotoLastItem({lastSuperLoto}) {
-    console.log(lastSuperLoto);
   return (
     <>
         <p>{lastSuperLoto.Date}</p>
