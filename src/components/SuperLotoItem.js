@@ -3,6 +3,13 @@ import { Stack, Skeleton, Box, Card, CardActions, CardContent, CardMedia, Typogr
 import image from '../assets/superlotoLogo.jpg';
 import '../styles/superLotoItem.css';
 
+function formatDate(dateString) {
+  const date = new Date(dateString);
+  const day = date.getDate();
+  const month = date.getMonth() + 1;
+  const year = date.getFullYear();
+  return `${day < 10 ? '0' + day : day}/${month < 10 ? '0' + month : month}/${year}`;
+}
 
 function SuperLotoItem({superLoto}) {
   return (
@@ -10,7 +17,7 @@ function SuperLotoItem({superLoto}) {
       <CardMedia className='image' component="img" image={image} />
       <CardContent>
         <Typography>
-          {superLoto.Date}
+          {formatDate(superLoto.Date)}
         </Typography>
        <Typography >
         <Stack direction="row" className='numbers'>
