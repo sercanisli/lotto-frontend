@@ -30,6 +30,7 @@ const superLotoApi = createApi({
                         url: '/api/superloto/GetRandomNumbersForSuperLotoAsync',
                         method:'GET'
                     };
+                    
                 },
             }),
             addSuperLoto:builder.mutation({
