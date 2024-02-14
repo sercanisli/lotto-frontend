@@ -1,11 +1,12 @@
 import { Stack, Typography } from '@mui/material';
 import React from 'react';
 import '../styles/superLotoLastItem.css';
+import {formatDate} from './dateUtils';
 
 function SuperLotoLastItem({lastSuperLoto}) {
   return (
     <>
-        <p>{lastSuperLoto.Date}</p>
+        <p>{formatDate(lastSuperLoto.Date)}</p>
         <Stack direction="row" className='numbers'>
             <p>{lastSuperLoto.Numbers[0]}</p>
             <p>{lastSuperLoto.Numbers[1]}</p>
