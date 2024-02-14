@@ -2,14 +2,7 @@ import React from 'react';
 import { Stack, Skeleton, Box, Card, CardActions, CardContent, CardMedia, Typography } from '@mui/material';
 import image from '../assets/superlotoLogo.jpg';
 import '../styles/superLotoItem.css';
-
-function formatDate(dateString) {
-  const date = new Date(dateString);
-  const day = date.getDate();
-  const month = date.getMonth() + 1;
-  const year = date.getFullYear();
-  return `${day < 10 ? '0' + day : day}/${month < 10 ? '0' + month : month}/${year}`;
-}
+import {formatDate} from './dateUtils';
 
 function SuperLotoItem({superLoto}) {
   return (
