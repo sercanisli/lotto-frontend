@@ -1,17 +1,27 @@
+.grid {
+   display: flex;
+   justify-content: center;
+}
+
 .card {
     display: flex;
     align-items: center;
-    justify-content: center;
+    justify-content: space-evenly;
     margin-bottom: 15px; 
     border: 1px solid rgb(170, 166, 166);
     border-radius: 10px !important;
     height: 150px;
 }
 
+.imageAndDate{
+   display: flex;
+   flex-wrap: wrap;
+   align-items: center;
+   margin-top: 10px;
+}
 
 .image {
-   width: 150px !important;
-   height: 150px !important;
+   width: 200px !important;
 }
 
 .date {

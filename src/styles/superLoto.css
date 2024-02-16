@@ -3,6 +3,10 @@
     margin-bottom: 100px;
 }
 
+.lastItem{
+    height: 184px;
+}
+
 .spinner{
     position: fixed;
     top: 50%;
@@ -21,6 +25,10 @@
     margin-bottom: 25px;
 }
 
+.items {
+    display: flex;
+    flex-wrap: wrap;
+}
 .paginate {
     display: flex;
     justify-content: center;

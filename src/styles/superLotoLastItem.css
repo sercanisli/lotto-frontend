@@ -1,8 +1,4 @@
-.date {
-    display: flex;
-    justify-content: end;
-    padding-right: 15px;
-}
+
 
 .numbers {
     display: flex;
@@ -24,3 +20,9 @@
     border-radius: 50%;
  }
  
+ .date {
+    display: flex;
+    justify-content: end;
+    padding-right: 60px;
+        
+}

@@ -14,13 +14,6 @@ function SuperLotoLastItem({lastSuperLoto}) {
   const date = formatDate(lastSuperLoto.Date);
   return (
     <>
-        {
-        lastSuperLoto.Date ? (
-          <p className='date'> Tarih : {date}</p>
-          ) : (
-            <p><CircularProgress/></p>
-          )
-        }
         <Stack direction="row" className='numbers'>
             <p>{lastSuperLoto.Numbers[0]}</p>
             <p>{lastSuperLoto.Numbers[1]}</p>
@@ -29,6 +22,13 @@ function SuperLotoLastItem({lastSuperLoto}) {
             <p>{lastSuperLoto.Numbers[4]}</p>
             <p>{lastSuperLoto.Numbers[5]}</p>
         </Stack>
+        {
+        lastSuperLoto.Date ? (
+          <p className='date'> Tarih : {date}</p>
+          ) : (
+            <p><CircularProgress/></p>
+          )
+        }
     </>
     
   )
