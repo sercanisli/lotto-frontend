@@ -1,12 +1,26 @@
-import { Stack, Typography } from '@mui/material';
+import { CircularProgress, Stack, Typography } from '@mui/material';
 import React from 'react';
 import '../styles/superLotoLastItem.css';
 import {formatDate} from './dateUtils';
 
 function SuperLotoLastItem({lastSuperLoto}) {
+
+  if (!lastSuperLoto) {
+    return (
+        <p><CircularProgress /></p>
+    );
+}
+  
+  const date = formatDate(lastSuperLoto.Date);
   return (
     <>
-        <p>{formatDate(lastSuperLoto.Date)}</p>
+        {
+        lastSuperLoto.Date ? (
+          <p className='date'> Tarih : {date}</p>
+          ) : (
+            <p><CircularProgress/></p>
+          )
+        }
         <Stack direction="row" className='numbers'>
             <p>{lastSuperLoto.Numbers[0]}</p>
             <p>{lastSuperLoto.Numbers[1]}</p>

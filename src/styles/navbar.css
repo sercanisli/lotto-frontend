@@ -11,7 +11,7 @@
 .navbar-logo {
   margin-left: 100px;
   height: 100%;
-  width: 25px;
+  width: 50px;
   display: flex;
   align-items: center;
 }
@@ -24,11 +24,18 @@
   display: flex;
   justify-content: center;
   flex-grow: 1; 
-  margin-right: 125px;
 }
 
 .navbar-link {
   text-decoration: none;
   color: white !important; 
   margin: 0 8px;
+}
+
+.navbar-login {
+  margin-right: 100px;
+  height: 100%;
+  width: 50px;
+  display: flex;
+  align-items: center;
 }

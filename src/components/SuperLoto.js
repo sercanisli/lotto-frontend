@@ -10,7 +10,7 @@ import '../styles/superLoto.css';
 import Pagination, { paginationClasses } from '@mui/material/Pagination';
 import axios from 'axios';
 import SuperLotoLastItem from './SuperLotoLastItem';
-import { Typography } from '@mui/material';
+import { Typography, CircularProgress} from '@mui/material';
 
 function SuperLoto() {
 
@@ -19,7 +19,6 @@ function SuperLoto() {
     const [lastOne, setLastOne] = useState(null);
 
     const handlePageChange = (event, page) => {
-        event.preventDefault();
         setSelectedPage(page);
     };
 
@@ -30,13 +29,11 @@ function SuperLoto() {
             }
         })
           .then(response => {
-            const lastOne = response.data[0];
-            setLastOne(lastOne);
-
+            const lastOneData = response.data[0];
+            setLastOne(lastOneData);
             const xPaginationHeader = response.headers['x-pagination'];
             const xPaginationData = JSON.parse(xPaginationHeader);
             const totalPage = xPaginationData.TotalPage;
-
             setTotalPage(totalPage);
           })
           .catch(error => {
@@ -51,8 +48,10 @@ function SuperLoto() {
       }
       
         const {data, isError, isFetching} = useFetchSuperLotoQuery(page);
-        if (isFetching ) {
-            return <div>Loading...</div>;
+        if(isFetching){
+            return (
+              <CircularProgress className='spinner' />
+            )
         }
     
 

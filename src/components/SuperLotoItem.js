@@ -9,8 +9,8 @@ function SuperLotoItem({superLoto}) {
     <Card className='card'>
       <CardMedia className='image' component="img" image={image} />
       <CardContent>
-        <Typography>
-          {formatDate(superLoto.Date)}
+        <Typography className='date'>
+          Tarih : {formatDate(superLoto.Date)}
         </Typography>
        <Typography >
         <Stack direction="row" className='numbers'>

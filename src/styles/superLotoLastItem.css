@@ -1,3 +1,9 @@
+.date {
+    display: flex;
+    justify-content: end;
+    padding-right: 15px;
+}
+
 .numbers {
     display: flex;
     align-items: center;
