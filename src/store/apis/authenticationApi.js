@@ -17,11 +17,14 @@ const authenticationApi = createApi ({
             fetchAuthentication:builder.query({
                 providesTags:['Authentication'],
                 query:(user) => {
-                    const { userName, password } = user;
+                    debugger;
                     return {
                         url : '/api/authentication/login' ,
                         method : 'POST',
-                        body: JSON.stringify({ userName, password })
+                        body: {
+                            userName : user.username,
+                            password : user.password
+                        },
                     };
                 },
             }),
