@@ -25,4 +25,7 @@ const sayisalLotoApi = createApi ({
             }),
         };
     },
-}),
+});
+
+export const { useFetchSayisalLotoQuery } = sayisalLotoApi;
+export { sayisalLotoApi };
