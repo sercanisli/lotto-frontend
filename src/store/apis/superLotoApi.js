@@ -23,7 +23,7 @@ const superLotoApi = createApi({
                     };
                 },
             }),
-            getRandomNumbers:builder.query({
+            getRandomNumbersForSuperLoto:builder.query({
                 providesTags:['SuperLoto'],
                 query: () => {
                     return {
@@ -70,5 +70,5 @@ const superLotoApi = createApi({
     },
 });
 
-export const { useFetchSuperLotoQuery, useAddSuperLotoMutation, useRemoveSuperLotoMutation, useGetRandomNumbersQuery } = superLotoApi;
+export const { useFetchSuperLotoQuery, useAddSuperLotoMutation, useRemoveSuperLotoMutation, useGetRandomNumbersForSuperLotoQuery } = superLotoApi;
 export { superLotoApi };

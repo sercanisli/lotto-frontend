@@ -21,5 +21,5 @@ export const store = configureStore({
 setupListeners(store.dispatch);
 
 export { useFetchAuthenticationQuery} from './apis/authenticationApi';
-export { useFetchSuperLotoQuery, useAddSuperLotoMutation, useRemoveSuperLotoMutation, useGetRandomNumbersQuery } from './apis/superLotoApi';
-export { useFetchSayisalLotoQuery } from './apis/sayisalLotoApi';
+export { useFetchSuperLotoQuery, useAddSuperLotoMutation, useRemoveSuperLotoMutation, useGetRandomNumbersForSuperLotoQuery } from './apis/superLotoApi';
+export { useFetchSayisalLotoQuery, useGetRandomNumbersForSayisalLotoQuery } from './apis/sayisalLotoApi';

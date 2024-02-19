@@ -1,13 +1,13 @@
 import { Stack, Button, Typography } from '@mui/material'
 import React from 'react'
-import { useGetRandomNumbersQuery } from '../store/apis/superLotoApi';
+import { useGetRandomNumbersForSuperLotoQuery } from '../store/apis/superLotoApi';
 import { useState } from 'react';
 import '../styles/superLotoGetRandom.css';
 
 
 function SuperLotoGetRandom() {
 
-  const { data, isError, isFetching, refetch } = useGetRandomNumbersQuery();
+  const { data, isError, isFetching, refetch } = useGetRandomNumbersForSuperLotoQuery();
   const [isLoading, setIsLoading] = useState(false);
 
   

@@ -23,7 +23,7 @@ const sayisalLotoApi = createApi ({
                     }; 
                 },
             }),
-            getRandomNumbers:builder.query({
+            getRandomNumbersForSayisalLoto:builder.query({
                 providesTags:['SayisalLoto'],
                 query: () => {
                     return {
@@ -36,5 +36,5 @@ const sayisalLotoApi = createApi ({
     },
 });
 
-export const { useFetchSayisalLotoQuery } = sayisalLotoApi;
+export const { useFetchSayisalLotoQuery, useGetRandomNumbersForSayisalLotoQuery } = sayisalLotoApi;
 export { sayisalLotoApi };
