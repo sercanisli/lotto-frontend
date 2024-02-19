@@ -27,7 +27,7 @@ const sayisalLotoApi = createApi ({
                 providesTags:['SayisalLoto'],
                 query: () => {
                     return {
-                        url: '/api/sayisalloto/GetRandomNumbersForSuperLotoAsync',
+                        url: '/api/sayisalloto/GetRandomNumbersForSayisalLotoAsync',
                         method: 'GET'
                     };
                 },
