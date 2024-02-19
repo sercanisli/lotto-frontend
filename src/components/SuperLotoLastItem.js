@@ -4,7 +4,6 @@ import '../styles/superLotoLastItem.css';
 import {formatDate} from './dateUtils';
 
 function SuperLotoLastItem({lastSuperLoto}) {
-
   if (!lastSuperLoto) {
     return (
         <p><CircularProgress /></p>

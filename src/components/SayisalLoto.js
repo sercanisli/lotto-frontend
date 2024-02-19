@@ -50,7 +50,7 @@ function SayisalLoto() {
   console.log(totalPage);
 
   const {data, isError, isFetching} = useFetchSayisalLotoQuery(page);
-        if(isFetching){
+        if(isFetching || !data){
             return (
               <CircularProgress className='spinner' />
             )
@@ -75,7 +75,7 @@ function SayisalLoto() {
                 </Grid>
                 <Grid item xs={12} md={6}>
                     <Typography className='headlines' variant='h4'>Son Çekiliş</Typography>
-                    <Item className='lastItem'><SayisalLotoLastItem lastOne = {lastOne}/></Item>
+                    <Item className='lastItem'><SayisalLotoLastItem lastSayisalLoto = {lastOne}/></Item>
                 </Grid>
                 <Grid item xs={12} md={12} >
                     <Typography className='headlines' variant='h5'>Tüm Çekilişler</Typography>
