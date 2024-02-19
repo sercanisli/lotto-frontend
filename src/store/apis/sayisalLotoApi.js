@@ -20,9 +20,18 @@ const sayisalLotoApi = createApi ({
                     return {
                         url :`/api/sayisalloto?pageSize=${page.pageSize}&pageNumber=${page.pageNumber}`,
                         method:'GET',
-                    };
+                    }; 
                 },
             }),
+            getRandomNumbers:builder.query({
+                providesTags:['SayisalLoto'],
+                query: () => {
+                    return {
+                        url: '/api/sayisalloto/GetRandomNumbersForSuperLotoAsync',
+                        method: 'GET'
+                    };
+                },
+            })
         };
     },
 });
