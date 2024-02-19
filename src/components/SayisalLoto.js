@@ -16,8 +16,6 @@ function SayisalLoto() {
   const [totalPage, setTotalPage] = useState(null);
   const [selectedPage, setSelectedPage] = useState(1);
 
-  debugger;
-
   useEffect(() => {
     axios.get(`https://localhost:7135/api/sayisalloto?pageSize=${page.pageSize}&pageNumber=${page.pageNumber}`, {
         headers: {
@@ -43,6 +41,23 @@ function SayisalLoto() {
   }
 
   console.log(totalPage);
+
+  const {data, isError, isFetching} = useFetchSayisalLotoQuery(page);
+        if(isFetching){
+            return (
+              <CircularProgress className='spinner' />
+            )
+        }
+    console.log(data);
+    
+
+    const Item = styled(Paper)(({ theme }) => ({
+        backgroundColor: theme.palette.mode === 'dark' ? '#1A2027' : '#fff',
+        ...theme.typography.body2,
+        padding: theme.spacing(1),
+        textAlign: 'center',
+        color: theme.palette.text.secondary,
+      }));
 
   return (
     <div>
