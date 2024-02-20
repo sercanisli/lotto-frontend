@@ -4,6 +4,7 @@ import Box from '@mui/material/Box';
 import Paper from '@mui/material/Paper';
 import Grid from '@mui/material/Grid';
 import { useFetchOnNumaraQuery } from '../store/apis/onNumaraApi';
+import '../styles/onNumara.css';
 import Pagination, { paginationClasses } from '@mui/material/Pagination';
 import axios from 'axios';
 import { Typography, CircularProgress} from '@mui/material';

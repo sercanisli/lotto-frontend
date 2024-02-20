@@ -1,0 +1,37 @@
+.container {
+    padding: 0px 200px;
+    margin-bottom: 100px;
+}
+
+.lastItem{
+    height: 159px !important;
+}
+
+.spinner{
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.grid {
+    margin-bottom: 25px;
+}
+
+.headlines {
+    display: flex;
+    justify-content: center;
+    margin-top: 50px;
+    margin-bottom: 25px;
+}
+
+.items {
+    display: flex;
+    flex-wrap: wrap;
+    border: 1px solid black;
+}
+.paginate {
+    display: flex;
+    justify-content: center;
+    margin-top: 25px;
+}
