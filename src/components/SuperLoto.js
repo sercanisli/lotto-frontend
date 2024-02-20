@@ -63,7 +63,7 @@ function SuperLoto() {
         color: theme.palette.text.secondary,
       }));
   return (
-        <Box >
+        <Box>
             <Grid className='container' container spacing={2}>
                 <Grid item xs={12} md={6}>
                     <Typography className='headlines' variant='h4'>Kazandıracak Numaralar</Typography>

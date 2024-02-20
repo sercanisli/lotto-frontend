@@ -19,7 +19,7 @@ function SuperLotoGetRandom() {
   };
 
   return (
-    <Stack>
+    <Stack >
       <Stack direction="row" className='numbers'>
         {data && data.numbers ? (
           data.numbers.map((number, index) => (

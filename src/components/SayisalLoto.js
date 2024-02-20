@@ -50,7 +50,7 @@ function SayisalLoto() {
   console.log(totalPage);
 
   const {data, isError, isFetching} = useFetchSayisalLotoQuery(page);
-        if(isFetching || !data){
+        if(isFetching || data  === undefined){
             return (
               <CircularProgress className='spinner' />
             )

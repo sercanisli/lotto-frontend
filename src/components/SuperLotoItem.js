@@ -3,7 +3,7 @@ import { Stack, Skeleton, Box, Card, CardActions, CardContent, CardMedia, Typogr
 import image from '../assets/superlotoLogo.jpg';
 import '../styles/superLotoItem.css';
 import {formatDate} from './dateUtils';
-
+ 
 function SuperLotoItem({superLoto}) {
   return (
     <Grid container xs={12} md={6} direction="row"  alignItems="center" className='grid'>
