@@ -4,10 +4,12 @@ import Box from '@mui/material/Box';
 import Paper from '@mui/material/Paper';
 import Grid from '@mui/material/Grid';
 import { useFetchOnNumaraQuery } from '../store/apis/onNumaraApi';
-import '../styles/sayisalLoto.css';
 import Pagination, { paginationClasses } from '@mui/material/Pagination';
 import axios from 'axios';
 import { Typography, CircularProgress} from '@mui/material';
+import OnNumaraGetRandom from './OnNumaraGetRandom';
+import OnNumaraLastItem from './OnNumaraLastItem';
+import OnNumaraItem from './OnNumaraItem';
 
 function OnNumara() {
 
@@ -65,7 +67,29 @@ function OnNumara() {
 
 
   return (
-    <div>OnNumaraaa</div>
+    <Box >
+            <Grid className='container' container spacing={2}>
+                <Grid item xs={12} md={6}>
+                    <Typography className='headlines' variant='h4'>Kazandıracak Numaralar</Typography>
+                    <Item><OnNumaraGetRandom /></Item>
+                </Grid>
+                <Grid item xs={12} md={6}>
+                    <Typography className='headlines' variant='h4'>Son Çekiliş</Typography>
+                    <Item className='lastItem'><OnNumaraLastItem lastOnNumara = {lastOne}/></Item>
+                </Grid>
+                <Grid item xs={12} md={12} >
+                    <Typography className='headlines' variant='h5'>Tüm Çekilişler</Typography>
+                    <Pagination className='paginate' count={totalPage} color="primary" page={selectedPage}  onChange={handlePageChange}/>
+                    <Item className='items'  >
+                        {
+                            data.map((onNumara) => {
+                                return <OnNumaraItem key={onNumara.id} onNumara = {onNumara} />
+                            })
+                        }
+                    </Item>
+                </Grid>
+            </Grid>
+        </Box>
   )
 }
 
