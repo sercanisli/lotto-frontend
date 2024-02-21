@@ -27,7 +27,7 @@ const onNumaraApi = createApi ({
                 providesTags:['OnNumara'],
                 query: () => {
                     return {
-                        url: '/api/sayisalloto/GetRandomNumbersForOnNumaraAsync',
+                        url: '/api/onnumara/GetRandomNumbersForOnNumaraAsync',
                         method: 'GET'
                     };
                 },
