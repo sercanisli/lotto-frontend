@@ -1,36 +1,36 @@
-.container {
+.containerSuperLoto {
     padding: 0px 200px;
     margin-bottom: 100px;
 }
 
-.lastItem{
+.lastItemSuperLoto{
     height: 159px !important;
 }
 
-.spinner{
+.spinnerSuperLoto{
     position: fixed;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
 }
 
-.grid {
+.gridSuperLoto {
     margin-bottom: 25px;
 }
 
-.headlines {
+.headlinesSuperLoto {
     display: flex;
     justify-content: center;
     margin-top: 50px;
     margin-bottom: 25px;
 }
 
-.items {
+.itemsSuperLoto {
     display: flex;
     flex-wrap: wrap;
     border: 1px solid black;
 }
-.paginate {
+.paginateSuperLoto {
     display: flex;
     justify-content: center;
     margin-top: 25px;

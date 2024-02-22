@@ -13,7 +13,7 @@ function SuperLotoLastItem({lastSuperLoto}) {
   const date = formatDate(lastSuperLoto.Date);
   return (
     <>
-        <Stack direction="row" className='numbers'>
+        <Stack direction="row" className='numbersSuperLotoLastItem'>
             <p>{lastSuperLoto.Numbers[0]}</p>
             <p>{lastSuperLoto.Numbers[1]}</p>
             <p>{lastSuperLoto.Numbers[2]}</p>
@@ -23,7 +23,7 @@ function SuperLotoLastItem({lastSuperLoto}) {
         </Stack>
         {
         lastSuperLoto.Date ? (
-          <p className='date'> Tarih : {date}</p>
+          <p className='dateSuperLotoLastItem'> Tarih : {date}</p>
           ) : (
             <p><CircularProgress/></p>
           )

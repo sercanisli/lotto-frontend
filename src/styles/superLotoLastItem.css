@@ -1,12 +1,12 @@
 
 
-.numbers {
+.numbersSuperLotoLastItem {
     display: flex;
     align-items: center;
     justify-content: center;
 }
 
-.numbers p{
+.numbersSuperLotoLastItem p{
     display: flex;
     align-items: center;
     justify-content: center;
@@ -20,9 +20,9 @@
     border-radius: 50%;
  }
  
- .date {
+ .dateSuperLotoLastItem {
     display: flex;
     justify-content: end;
-    padding-right: 60px;
+    padding-right: 105px;
         
 }

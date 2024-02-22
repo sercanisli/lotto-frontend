@@ -1,11 +1,11 @@
 
-.numbers {
+.numbersSayisalLotoGetRandom {
     display: flex;
     align-items: center;
     justify-content: center;
 }
 
-.numbers p{
+.numbersSayisalLotoGetRandom p{
     display: flex;
     align-items: center;
     justify-content: center;
@@ -19,6 +19,6 @@
     border-radius: 50%;
  }
 
- .date {
+ .dateSayisalLotoGetRandom {
     font-size: 13px;
  }

@@ -1,9 +1,9 @@
-.grid {
+.gridSuperLotoItem {
    display: flex;
    justify-content: center;
 }
 
-.card {
+.cardSuperLotoItem {
     display: flex;
     align-items: center;
     justify-content: space-evenly;
@@ -13,24 +13,30 @@
     height: 150px;
 }
 
-.imageAndDate{
+.imageAndDateSuperLotoItem{
    display: flex;
    flex-wrap: wrap;
    align-items: center;
    margin-top: 10px;
 }
 
-.image {
+.imageSuperLotoItem {
    width: 200px !important;
 }
 
-.date {
+.dateSuperLotoItem {
    display: flex;
    justify-content: end;
    padding-right: 15px;
 }
 
-.numbers p{
+.numbersSuperLotoItem {
+   display: flex;
+   align-items: center;
+   justify-content: center;
+}
+
+.numbersSuperLotoItem p{
    display: flex;
    align-items: center;
    justify-content: center;

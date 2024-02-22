@@ -1,9 +1,9 @@
-.grid {
+.gridSayisalLotoItem {
     display: flex;
     justify-content: center;
  }
  
- .card {
+ .cardSayisalLotoItem {
      display: flex;
      align-items: center;
      justify-content: space-evenly;
@@ -13,24 +13,30 @@
      height: 150px;
  }
  
- .imageAndDate{
+ .imageAndDateSayisalLotoItem{
     display: flex;
     flex-wrap: wrap;
     align-items: center;
     margin-top: 10px;
  }
  
- .image {
+ .imageSayisalLotoItem {
     width: 200px !important;
  }
  
- .date {
+ .dateSayisalLotoItem {
     display: flex;
     justify-content: end;
     padding-right: 15px;
  }
+
+ .numbersSayisalLotoItem {
+   display: flex;
+    align-items: center;
+    justify-content: center;
+ }
  
- .numbers p{
+ .numbersSayisalLotoItem p{
     display: flex;
     align-items: center;
     justify-content: center;

@@ -1,36 +1,36 @@
-.container {
+.containerOnNumara {
     padding: 0px 200px;
     margin-bottom: 100px;
 }
 
-.lastItem{
-    height: 159px !important;
+.lastItemOnNumara{
+    height: 148px !important;
 }
 
-.spinner{
+.spinnerOnNumara{
     position: fixed;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
 }
 
-.grid {
+.gridOnNumara {
     margin-bottom: 25px;
 }
 
-.headlines {
+.headlinesOnNumara {
     display: flex;
     justify-content: center;
     margin-top: 50px;
     margin-bottom: 25px;
 }
 
-.items {
+.itemsOnNumara {
     display: flex;
     flex-wrap: wrap;
     border: 1px solid black;
 }
-.paginate {
+.paginateOnNumara {
     display: flex;
     justify-content: center;
     margin-top: 25px;

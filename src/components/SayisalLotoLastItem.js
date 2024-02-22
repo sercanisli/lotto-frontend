@@ -12,7 +12,7 @@ function SayisalLotoLastItem({lastSayisalLoto}) {
   const date = formatDate(lastSayisalLoto.Date);
   return (
     <>
-        <Stack direction="row" className='numbers'>
+        <Stack direction="row" className='numbersSayisalLotoLastItem'>
             <p>{lastSayisalLoto.Numbers[0]}</p>
             <p>{lastSayisalLoto.Numbers[1]}</p>
             <p>{lastSayisalLoto.Numbers[2]}</p>
@@ -22,7 +22,7 @@ function SayisalLotoLastItem({lastSayisalLoto}) {
         </Stack>
         {
         lastSayisalLoto.Date ? (
-          <p className='date'> Tarih : {date}</p>
+          <p className='dateSayisalLotoLastItem'> Tarih : {date}</p>
           ) : (
             <p><CircularProgress/></p>
           )

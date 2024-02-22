@@ -1,36 +1,36 @@
-.container {
+.containerSayisalLoto {
     padding: 0px 200px;
     margin-bottom: 100px;
 }
 
-.lastItem{
+.lastItemSayisalLoto{
     height: 159px !important;
 }
 
-.spinner{
+.spinnerSayisalLoto{
     position: fixed;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
 }
 
-.grid {
+.gridSayisalLoto {
     margin-bottom: 25px;
 }
 
-.headlines {
+.headlinesSayisalLoto {
     display: flex;
     justify-content: center;
     margin-top: 50px;
     margin-bottom: 25px;
 }
 
-.items {
+.itemsSayisalLoto {
     display: flex;
     flex-wrap: wrap;
     border: 1px solid black;
 }
-.paginate {
+.paginateSayisalLoto {
     display: flex;
     justify-content: center;
     margin-top: 25px;

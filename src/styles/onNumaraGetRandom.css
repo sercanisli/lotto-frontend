@@ -1,12 +1,12 @@
 
-.numbers {
+.numbersOnNumaraGetRandom {
     display: flex;
     flex-wrap: wrap;
     align-items: center;
     justify-content: center;
 }
 
-.numbers p{
+.numbersOnNumaraGetRandom p{
     display: flex;
     align-items: center;
     justify-content: center;
@@ -20,6 +20,6 @@
     border-radius: 50%;
  }
 
- .date {
+ .dateOnNumaraGetRandom {
     font-size: 13px;
  }

@@ -6,17 +6,17 @@ import {formatDate} from './dateUtils';
 
 function SayisalLotoItem({sayisalLoto}) {
   return (
-    <Grid container xs={12} md={6} direction="row"  alignItems="center" className='grid'>
-      <Card className='card'>
+    <Grid container xs={12} md={6} direction="row"  alignItems="center" className='gridSayisalLotoItem'>
+      <Card className='cardSayisalLotoItem'>
       <CardContent>
-        <Stack direction="row" className='imageAndDate'>
-          <CardMedia className='image' component="img" image={image} />
-          <Typography className='date'>
+        <Stack direction="row" className='imageAndDateSayisalLotoItem'>
+          <CardMedia className='imageSayisalLotoItem' component="img" image={image} />
+          <Typography className='dateSayisalLotoItem'>
             Tarih : {formatDate(sayisalLoto.Date)}
           </Typography>
         </Stack>
         <Typography >
-          <Stack direction="row" className='numbers'>
+          <Stack direction="row" className='numbersSayisalLotoItem'>
             <p>{sayisalLoto.Numbers[0]}</p>
             <p>{sayisalLoto.Numbers[1]}</p>
             <p>{sayisalLoto.Numbers[2]}</p>

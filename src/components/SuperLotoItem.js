@@ -6,17 +6,18 @@ import {formatDate} from './dateUtils';
  
 function SuperLotoItem({superLoto}) {
   return (
-    <Grid container xs={12} md={6} direction="row"  alignItems="center" className='grid'>
-      <Card className='card'>
+
+    <Grid container xs={12} md={6} direction="row"  alignItems="center" className='gridSuperLotoItem'>
+      <Card className='cardSuperLotoItem'>
       <CardContent>
-        <Stack direction="row" className='imageAndDate'>
-          <CardMedia className='image' component="img" image={image} />
-          <Typography className='date'>
+        <Stack direction="row" className='imageAndDateSuperLotoItem'>
+          <CardMedia className='imageSuperLotoItem' component="img" image={image} />
+          <Typography className='dateSuperLotoItem'>
             Tarih : {formatDate(superLoto.Date)}
           </Typography>
         </Stack>
         <Typography >
-          <Stack direction="row" className='numbers'>
+          <Stack direction="row" className='numbersSuperLotoItem'>
             <p>{superLoto.Numbers[0]}</p>
             <p>{superLoto.Numbers[1]}</p>
             <p>{superLoto.Numbers[2]}</p>

@@ -50,7 +50,7 @@ function SuperLoto() {
         const {data, isError, isFetching} = useFetchSuperLotoQuery(page);
         if(isFetching){
             return (
-              <CircularProgress className='spinner' />
+              <CircularProgress className='spinnerSuperLoto' />
             )
         }
     
@@ -64,19 +64,19 @@ function SuperLoto() {
       }));
   return (
         <Box>
-            <Grid className='container' container spacing={2}>
+            <Grid className='containerSuperLoto' container spacing={2}>
                 <Grid item xs={12} md={6}>
-                    <Typography className='headlines' variant='h4'>Kazandıracak Numaralar</Typography>
+                    <Typography className='headlinesSuperLoto' variant='h4'>Kazandıracak Numaralar</Typography>
                     <Item><SuperLotoGetRandom /></Item>
                 </Grid>
                 <Grid item xs={12} md={6}>
-                    <Typography className='headlines' variant='h4'>Son Çekiliş</Typography>
-                    <Item className='lastItem'><SuperLotoLastItem lastSuperLoto={lastOne}/></Item>
+                    <Typography className='headlinesSuperLoto' variant='h4'>Son Çekiliş</Typography>
+                    <Item className='lastItemSuperLoto'><SuperLotoLastItem lastSuperLoto={lastOne}/></Item>
                 </Grid>
                 <Grid item xs={12} md={12} >
-                    <Typography className='headlines' variant='h5'>Tüm Çekilişler</Typography>
-                    <Pagination className='paginate' count={totalPage} color="primary" page={selectedPage}  onChange={handlePageChange}/>
-                    <Item className='items'  >
+                    <Typography className='headlinesSuperLoto' variant='h5'>Tüm Çekilişler</Typography>
+                    <Pagination className='paginateSuperLoto' count={totalPage} color="primary" page={selectedPage}  onChange={handlePageChange}/>
+                    <Item className='itemsSuperLoto'  >
                         {
                             data.map((superLoto) => {
                                 return <SuperLotoItem key={superLoto.id} superLoto = {superLoto} />

@@ -1,12 +1,12 @@
 
 
-.numbers {
+.numbersSayisalLotoLastItem {
     display: flex;
     align-items: center;
     justify-content: center;
 }
 
-.numbers p{
+.numbersSayisalLotoLastItem p{
     display: flex;
     align-items: center;
     justify-content: center;
@@ -20,9 +20,9 @@
     border-radius: 50%;
  }
  
- .date {
+ .dateSayisalLotoLastItem {
     display: flex;
     justify-content: end;
-    padding-right: 60px;
+    padding-right: 100px;
         
 }

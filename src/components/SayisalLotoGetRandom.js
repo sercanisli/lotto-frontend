@@ -18,7 +18,7 @@ function SayisalLotoGetRandom() {
 
   return (
     <Stack>
-      <Stack direction="row" className='numbers'>
+      <Stack direction="row" className='numbersSayisalLotoGetRandom'>
         {data && data.numbers ? (
           data.numbers.map((number, index) => (
             <p key={index}>{number}</p>
@@ -32,7 +32,7 @@ function SayisalLotoGetRandom() {
       <Stack>
         <Typography>
           {data && data.date ? (
-            <p className='date'>{data.date} tarihinde kazanan numaralar ile %{data.matchRate} oranında eşleşiyor.</p>
+            <p className='dateSayisalLotoGetRandom'>{data.date} tarihinde kazanan numaralar ile %{data.matchRate} oranında eşleşiyor.</p>
           ) : (<p></p>)
           }
         </Typography>
