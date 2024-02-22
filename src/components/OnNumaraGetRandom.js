@@ -24,7 +24,7 @@ function OnNumaraGetRandom() {
             <p key={index}>{number}</p>
           ))
         ) : (
-          Array.from({ length: 6 }, (_, index) => (
+          Array.from({ length: 10 }, (_, index) => (
             <p key={index}></p>
           ))
         )}
