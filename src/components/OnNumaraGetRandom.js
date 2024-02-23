@@ -17,7 +17,7 @@ function OnNumaraGetRandom() {
   };
 
   return (
-    <Stack>
+    <Stack className='onNumaraGetRandom'>
       <Stack direction="row" className='numbersOnNumaraGetRandom'>
         {data && data.numbers ? (
           data.numbers.map((number, index) => (

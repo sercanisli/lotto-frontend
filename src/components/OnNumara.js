@@ -72,7 +72,7 @@ function OnNumara() {
             <Grid className='containerOnNumara' container spacing={2}>
                 <Grid item xs={12} md={6}>
                     <Typography className='headlinesOnNumara' variant='h4'>Kazandıracak Numaralar</Typography>
-                    <Item><OnNumaraGetRandom /></Item>
+                    <Item className='lastItemOnNumara'><OnNumaraGetRandom /></Item>
                 </Grid>
                 <Grid item xs={12} md={6}>
                     <Typography className='headlinesOnNumara' variant='h4'>Son Çekiliş</Typography>
