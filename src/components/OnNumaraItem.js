@@ -9,12 +9,13 @@ function OnNumaraItem({onNumara}) {
   return (
     <Grid container xs={12} md={12} direction="row"  alignItems="center" className='gridOnNumaraItem'>
       <Card className='cardOnNumaraItem'>
-      <CardContent>
-        <Stack direction="row" className='imageAndDateOnNumaraItem'>
-          <CardMedia className='imageOnNumaraItem' component="img" image={image} />
+      <CardContent className='numbersDivOnNumaraItem'>
+        <Stack className='imageAndDateOnNumaraItem'>
           <Typography className='dateOnNumaraItem'>
             Tarih : {formatDate(onNumara.Date)}
           </Typography>
+          <CardMedia className='imageOnNumaraItem' component="img" image={image} />
+          
         </Stack>
         <Typography >
           <Stack direction="row" className='numbersOnNumaraItem'>
