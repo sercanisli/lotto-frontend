@@ -17,7 +17,7 @@ function SayisalLotoGetRandom() {
   };
 
   return (
-    <Stack>
+    <Stack className='sayisalLotoGetRandom'>
       <Stack direction="row" className='numbersSayisalLotoGetRandom'>
         {data && data.numbers ? (
           data.numbers.map((number, index) => (
