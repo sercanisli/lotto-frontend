@@ -14,23 +14,19 @@ const authenticationApi = createApi ({
     }),
     endpoints(builder) {
         return {
-            fetchAuthentication:builder.query({
-                providesTags:['Authentication'],
-                query:(user) => {
-                    debugger;
+            loginUser:builder.mutation({
+                providesTags:['Authenctication'],
+                query : (user) => {
                     return {
-                        url : '/api/authentication/login' ,
+                        url:'api/authentication/login',
                         method : 'POST',
-                        body: {
-                            userName : user.username,
-                            password : user.password
-                        },
+                        body: JSON.stringify(user)
                     };
                 },
             }),
-        };
-    },
+        }
+    }
 });
 
-export const { useFetchAuthenticationQuery } = authenticationApi;
+export const { useLoginUserMutation } = authenticationApi;
 export { authenticationApi };

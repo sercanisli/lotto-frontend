@@ -23,7 +23,7 @@ export const store = configureStore({
 
 setupListeners(store.dispatch);
 
-export { useFetchAuthenticationQuery} from './apis/authenticationApi';
+export { useLoginUserMutation} from './apis/authenticationApi';
 export { useFetchSuperLotoQuery, useAddSuperLotoMutation, useRemoveSuperLotoMutation, useGetRandomNumbersForSuperLotoQuery } from './apis/superLotoApi';
 export { useFetchSayisalLotoQuery, useGetRandomNumbersForSayisalLotoQuery } from './apis/sayisalLotoApi';
 export { useFetchOnNumaraQuery, useGetRandomNumbersForOnNumaraQuery } from './apis/onNumaraApi';

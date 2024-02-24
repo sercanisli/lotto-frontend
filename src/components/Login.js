@@ -1,6 +1,6 @@
 import React from 'react'
 import '../styles/login.css';
-import { useFetchAuthenticationQuery } from '../store/apis/authenticationApi';
+import { useLoginUserMutation } from '../store/apis/authenticationApi';
 import { useState } from 'react';
 
 
@@ -15,7 +15,7 @@ function Login() {
       username:name, 
       password:password
     }
-    const {data, isError, isFetching} = useFetchAuthenticationQuery(user);
+    const {data, isError, isFetching} = useLoginUserMutation(user);
   } 
 
   
