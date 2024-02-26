@@ -5,5 +5,5 @@ function SansTopu() {
     <div>SansTopuuuu</div>
   )
 }
-
+  
 export default SansTopu
