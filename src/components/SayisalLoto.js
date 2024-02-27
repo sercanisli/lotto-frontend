@@ -10,7 +10,7 @@ import axios from 'axios';
 import { Typography, CircularProgress} from '@mui/material';
 import SayisalLotoGetRandom from './SayisalLotoGetRandom';
 import SayisalLotoLastItem from './SayisalLotoLastItem';
-import SayisalLotoItem from './SayisalLotoItem';
+import SayisalLotoItem from './SayisalLotoItem'; 
 
 
 function SayisalLoto() {
