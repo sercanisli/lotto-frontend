@@ -19,11 +19,11 @@ const Authentication = () => {
 
     const [formValue, setFormValue] = useState(initialState);
     const [showRegister, setShowRegister] = useState(false);
-    const {firstName, lastName, userName, password, confirmPassword, email, phoneNumber} = formValue;
+    const {firstName, lastName, userName, password, confirmPassword, email} = formValue;
 
-    const handleChange = () => {
-
-    }
+    const handleChange = (event) => {
+        setFormValue({...formValue, [event.target.name]: event.target.value});
+    };
 
     return (
         <section className='vh-100 gradient-custom'>
@@ -43,21 +43,117 @@ const Authentication = () => {
                                     <p className="text-white-5 mb-4">
                                         {
                                             !showRegister ? 
-                                                "Lütfen Email ve Şifrenizi giriniz." :
+                                                "Lütfen Kullanıcı Adı ve Şifrenizi giriniz." :
                                                 "Kullanıcı detaylarını giriniz."
                                         }
                                     </p>
+                                    {showRegister && (
+                                        <>
+                                            <div className="form-outlined form-white mb-4">
+                                                <MDBInput 
+                                                    type='text'
+                                                    name='firstName'
+                                                    value={firstName}
+                                                    onChange={handleChange}
+                                                    placeholder="Adınız"
+                                                    className='form-control form-coontrol-lg'
+                                                />
+                                            </div>
+                                            <div className="form-outlined form-white mb-4">
+                                                <MDBInput 
+                                                    type='text'
+                                                    name='lastName'
+                                                    value={lastName}
+                                                    onChange={handleChange}
+                                                    placeholder="Soy Adınız"
+                                                    className='form-control form-coontrol-lg'
+                                                />
+                                            </div>
+                                            <div className="form-outlined form-white mb-4">
+                                                <MDBInput 
+                                                    type='email'
+                                                    name='email'
+                                                    value={email}
+                                                    onChange={handleChange}
+                                                    placeholder="Mail Adresiniz"
+                                                    className='form-control form-coontrol-lg'
+                                                />
+                                            </div>
+                                        </>
+                                    )}
                                     <div className="form-outlined form-white mb-4">
                                         <MDBInput 
-                                            type='email'
-                                            name='email'
-                                            value={email}
+                                            type='text'
+                                            name='userName'
+                                            value={userName}
                                             onChange={handleChange}
-                                            label="Email"
+                                            placeholder="Kullanıcı Adı"
                                             className='form-control form-coontrol-lg'
                                         />
                                     </div>
-                                </div>
+                                    <div className="form-outlined form-white mb-4">
+                                        <MDBInput 
+                                            type='password'
+                                            name='password'
+                                            value={password}
+                                            onChange={handleChange}
+                                            placeholder="Şifre"
+                                            className='form-control form-coontrol-lg'
+                                        />
+                                    </div>
+                                    {showRegister && (
+                                        <div className="form-outlined form-white mb-4">
+                                            <MDBInput 
+                                                type='password'
+                                                name='confirmPassword'
+                                                value={confirmPassword}
+                                                onChange={handleChange}
+                                                placeholder="Tekrar Şifre"
+                                                className='form-control form-coontrol-lg'
+                                            />
+                                        </div>
+                                    )}
+                                    {
+                                        !showRegister ? (
+                                            <button className="btn btn-outline-light btn-lg px-5" type='button'>
+                                                Giriş Yap
+                                            </button>
+                                        ) : (
+                                            <button className="btn btn-outline-light btn-lg px-5" type='button'>
+                                                Kaydol
+                                            </button>
+                                        )
+                                    }
+                                    </div>
+                                    <div>
+                                        <h5 className="mb-0">
+                                            {
+                                                !showRegister ? (
+                                                    <>
+                                                        Hesabın yok mu?
+                                                        <p 
+                                                            className="text-white-50 fw-bold"
+                                                            style={{cursor : "pointer"}}
+                                                            onClick={() => setShowRegister(true)}
+                                                        >
+                                                            Kayıt Ol
+                                                        </p> 
+                                                    </>
+                                                ) : (
+                                                    <>
+                                                        Şifre yanlış
+                                                        <p 
+                                                            className="text-white-50 fw-bold"
+                                                            style={{cursor : "pointer"}}
+                                                            onClick={() => setShowRegister(false)}
+                                                        >
+                                                            Giriş Yap
+                                                        </p> 
+                                                    </>
+                                                )
+                                            }
+                                        </h5>
+                                    </div>
                             </div>
                         </div>
                     </div>
