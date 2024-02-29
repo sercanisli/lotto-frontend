@@ -7,8 +7,8 @@ import OnNumara from './components/OnNumara';
 import SansTopu from './components/SansTopu';
 import Footer from './components/Footer';
 import Home from './components/Home';
-import Login from './components/Login';
 import SignIn from './components/SignIn';
+import Authentication from './components/Authentication';
 
 function App() {
   return (
@@ -20,7 +20,7 @@ function App() {
         <Route path='superloto' exact element={<SuperLoto/>} />
         <Route path='onnumara' exact element={<OnNumara />} />
         <Route path='sanstopu' exact element={<SansTopu />} />
-        <Route path='login' exact element={<Login />}/>
+        <Route path='authentication' exact element={<Authentication />}/>
         <Route path='signin' exact element={<SignIn/>}/>
       </Routes>
       <Footer />
