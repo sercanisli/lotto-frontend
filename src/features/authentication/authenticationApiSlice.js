@@ -9,6 +9,7 @@ export const authenticationApiSlice = authenticationApi.injectEndpoints({
                 body : {...credentials}
             })
         }),
-        
     })
 })
+
+export const {useLoginMutation} = authenticationApiSlice

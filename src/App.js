@@ -8,7 +8,7 @@ import SansTopu from './components/SansTopu';
 import Footer from './components/Footer';
 import Home from './components/Home';
 import SignIn from './components/SignIn';
-import Authentication from './components/Authentication';
+import Login from './features/authentication/Login';
 
 function App() {
   return (
@@ -20,7 +20,7 @@ function App() {
         <Route path='superloto' exact element={<SuperLoto/>} />
         <Route path='onnumara' exact element={<OnNumara />} />
         <Route path='sanstopu' exact element={<SansTopu />} />
-        <Route path='authentication' exact element={<Authentication />}/>
+        <Route path='login' exact element={<Login />}/>
         <Route path='signin' exact element={<SignIn/>}/>
       </Routes>
       <Footer />
