@@ -28,7 +28,11 @@ const Login = () => {
     const handleSubmit = async (event) => {
         event.preventDefault()
 
-        
+        const credentials = {
+            username: user,
+            password: pwd
+        };
+
         try {
             const userData = await login(credentials).unwrap()
             console.log(userData);
