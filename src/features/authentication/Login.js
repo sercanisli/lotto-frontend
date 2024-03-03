@@ -1,5 +1,5 @@
-import React, { useRef } from 'react'
-import { useState, useEffect} from 'react'
+import React from 'react'
+import { useRef, useState, useEffect} from 'react'
 import { useNavigate } from 'react-router-dom'
 import { useDispatch } from 'react-redux'
 import { setCredentials } from './authenticationSlice'
@@ -17,9 +17,9 @@ const Login = () => {
     const [login, {isLoading}] = useLoginMutation()
     const dispatch = useDispatch()
 
-    useEffect(() => {
-        userRef.current.focus()
-    }, [])
+    // useEffect(() => {
+    //     userRef.current.focus();
+    // }, [])
 
     useEffect(() => {
         setErrMsg('');
@@ -28,8 +28,10 @@ const Login = () => {
     const handleSubmit = async (event) => {
         event.preventDefault()
 
+        
         try {
-            const userData = await login({user, pwd}).unwrap()
+            const userData = await login(credentials).unwrap()
+            console.log(userData);
             dispatch(setCredentials({...userData,user}))
             setUser('')
             setPwd('')
@@ -37,6 +39,7 @@ const Login = () => {
         } catch (error) {
             if(!error?.response) {
                 setErrMsg('No Server Response'); 
+                console.log(error)
             } else if (error.response?.status === 400) {
                 setErrMsg('Missing Username or Password');
             } else if (error.response?.status === 401) {
@@ -44,7 +47,7 @@ const Login = () => {
             } else {
                 setErrMsg('Login Failde');
             }
-            errRef.current.focus();
+            // errRef.current.focus();
         }
     }
 
@@ -55,10 +58,10 @@ const Login = () => {
         <section className="login">
             <p ref={errRef} className={errMsg ? "errmsg" : "offscreen"} aria-live="assertive">{errMsg}</p>
 
-            <h1>Employee Login</h1>
+            <h1>Giriş</h1>
 
             <form onSubmit={handleSubmit}>
-                <label htmlFor="username">Username:</label>
+                <label htmlFor="username">Kullanıcı Adı:</label>
                 <input
                     type="text"
                     id="username"
@@ -69,7 +72,7 @@ const Login = () => {
                     required
                 />
 
-                <label htmlFor="password">Password:</label>
+                <label htmlFor="password">Şifre:</label>
                 <input
                     type="password"
                     id="password"

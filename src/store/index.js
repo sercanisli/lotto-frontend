@@ -6,7 +6,7 @@ import { onNumaraApi } from "./apis/onNumaraApi";
 import { sansTopuApi } from './apis/sansTopuApi';
 import { authenticationApi } from "./apis/authenticationApi";
 import authReducer from '../features/authentication/authenticationSlice'
-
+ 
 export const store = configureStore({
     reducer: {
         [superLotoApi.reducerPath]: superLotoApi.reducer,

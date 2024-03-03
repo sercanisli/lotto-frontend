@@ -5,7 +5,8 @@ const baseQuery = fetchBaseQuery ({
     baseUrl: 'https://localhost:7135',
     credentials: 'include',
     prepareHeaders : (headers, {getState}) => {
-        const token = getState().authentication.token
+        headers.set("Content-Type", `application/json`)
+        const token = getState().auth.token
         if (token) {
             headers.set("authorization", `Bearer ${token}`)
         }
@@ -13,15 +14,15 @@ const baseQuery = fetchBaseQuery ({
     }
 })
 
-const baseQueryWithReauthentication = async (args, api, extraOptions) => {
+const baseQueryWithReauth = async (args, api, extraOptions) => {
     let result = await baseQuery(args, api, extraOptions)
 
     if(result?.error?.originalStatus === 403) {
         console.log('sending refresh token')
-        const refreshResult = await baseQuery('api/authentication/refresh', api, extraOptions)
+        const refreshResult = await baseQuery('/api/authentication/refresh', api, extraOptions)
         console.log(refreshResult)
         if(refreshResult?.data) {
-            const user = api.getState().authentication.user
+            const user = api.getState().auth.user
             api.dispatch(setCredentials({...refreshResult.data, user}))
             result = await baseQuery (args, api, extraOptions)
         } else {
@@ -32,6 +33,6 @@ const baseQueryWithReauthentication = async (args, api, extraOptions) => {
 }
 
 export const authenticationApi = createApi({
-    baseQuery: baseQueryWithReauthentication,
+    baseQuery: baseQueryWithReauth,
     endpoints: builder => ({})
 })

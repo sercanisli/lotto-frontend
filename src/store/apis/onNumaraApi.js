@@ -7,7 +7,7 @@ const onNumaraApi = createApi ({
         prepareHeaders: (headers, {getState}) => {
             headers['Content-Type'] = 'application/json';
             return headers;
-        },
+        }, 
         fetchFn:(...args) => {
             return fetch(...args);
         },
