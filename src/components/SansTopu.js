@@ -3,10 +3,11 @@ import { styled } from '@mui/material/styles';
 import Box from '@mui/material/Box';
 import Paper from '@mui/material/Paper';
 import Grid from '@mui/material/Grid';
-import { useFetchSayisalLotoQuery } from '../store/apis/sayisalLotoApi';
+import { useFetchSansTopuQuery } from '../store/apis/sansTopuApi';
 import Pagination, { paginationClasses } from '@mui/material/Pagination';
 import axios from 'axios';
 import { Typography, CircularProgress} from '@mui/material';
+
 
 
 function SansTopu() {
@@ -41,6 +42,13 @@ function SansTopu() {
 
   console.log(totalPage);
 
+  const {data, isError, isFetching} = useFetchSansTopuQuery(page);
+        if(isFetching || data  === undefined){
+            return (
+              <CircularProgress className='spinnerSayisalLoto' />
+            )
+        }
+    console.log(data);
 
   return (
     <div>SansTopuuuu</div>
