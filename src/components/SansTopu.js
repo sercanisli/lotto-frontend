@@ -49,6 +49,8 @@ function SansTopu() {
     pageNumber:selectedPage
   }
 
+  console.log(lastOne);
+
   console.log(totalPage);
 
   const {data, isError, isFetching} = useFetchSansTopuQuery(page);
@@ -76,7 +78,7 @@ function SansTopu() {
                 </Grid>
                 <Grid item xs={12} md={6}>
                     <Typography className='headlinesSansTopu' variant='h4'>Son Çekiliş</Typography>
-                    <Item className='lastItemSayisalLoto'><SansTopuLastItem lastSayisalLoto = {lastOne}/></Item>
+                    <Item className='lastItemSayisalLoto'><SansTopuLastItem lastSansTopu = {lastOne}/></Item>
                 </Grid>
                 <Grid item xs={12} md={12} >
                     <Typography className='headlinesSansTopu' variant='h5'>Tüm Çekilişler</Typography>
