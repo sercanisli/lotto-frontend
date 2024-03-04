@@ -1,6 +1,7 @@
 import { CircularProgress, Stack, Typography } from '@mui/material';
 import React from 'react';
 import {formatDate} from './dateUtils';
+import '../styles/sansTopuLastItem.css'
 
 function SansTopuLastItem({lastSansTopu}) {
 
@@ -14,18 +15,23 @@ function SansTopuLastItem({lastSansTopu}) {
   
   return (
     <>
-      <Stack direction="row" className='numbersSayisalLotoLastItem'>
+    <Stack direction="row">
+      <Stack direction="row" className='numbersSansTopuLastItem'>
             <p>{lastSansTopu.Numbers[0]}</p>
             <p>{lastSansTopu.Numbers[1]}</p>
             <p>{lastSansTopu.Numbers[2]}</p>
             <p>{lastSansTopu.Numbers[3]}</p>
             <p>{lastSansTopu.Numbers[4]}</p>
-            <p>+</p>
-            <p>{lastSansTopu.PlusNumber}</p>
-        </Stack>
+      </Stack>
+      <Stack direction="row">
+        <p className='plusSansTopuLastItem'>+</p>
+        <p className='plusNumberSansTopuLasItem'>{lastSansTopu.PlusNumber}</p>
+      </Stack>
+    </Stack>
+      
         {
         lastSansTopu.Date ? (
-          <p className='dateSayisalLotoLastItem'> Tarih : {date}</p>
+          <p className='dateSansTopuLastItem'> Tarih : {date}</p>
           ) : (
             <p><CircularProgress/></p>
           )

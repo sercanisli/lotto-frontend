@@ -1,15 +1,12 @@
-.sansTopuGetRandom {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
-.numbersSansTopuGetRandom {
+
+
+.numbersSansTopuLastItem {
     display: flex;
     align-items: center;
     justify-content: center;
 }
 
-.numbersSansTopuGetRandom p{
+.numbersSansTopuLastItem p{
     display: flex;
     align-items: center;
     justify-content: center;
@@ -19,24 +16,11 @@
     color: black;
     font-size: 20px !important;
     width: 35px !important;
-    height: 35px !important;
+    height:35px !important;
     border-radius: 50%;
  }
 
- .plusNumberSansTopuGetRandom {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    margin: 10px;
-    border: 1px solid black;
-    background-color: orange;
-    color: black;
-    font-size: 20px !important;
-    width: 35px !important;
-    height: 35px !important;
-    border-radius: 50%;
- }
- .plusSansTopuGetRandom{
+ .plusSansTopuLastItem{
     display: flex;
     align-items: center;
     justify-content: center;
@@ -44,6 +28,23 @@
     padding: 0 5;
  }
 
- .dateSansTopuGetRandom {
-    font-size: 13px;
+ .plusNumberSansTopuLastItem {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 10px;
+    border: 1px solid black;
+    background-color: orange;
+    color: black;
+    font-size: 20px !important;
+    width: 35px !important;
+    height: 35px !important;
+    border-radius: 50%;
  }
+ 
+ .dateSansTopuLastItem {
+    display: flex;
+    justify-content: end;
+    padding-right: 85px;
+        
+}

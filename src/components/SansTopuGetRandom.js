@@ -36,7 +36,7 @@ function SansTopuGetRandom() {
           <Typography>
             {data && data.plusNumber ? (
               <Stack direction="row">
-                <p className='plus'>+</p>
+                <p className='plusSansTopuGetRandom'>+</p>
                 <p className='plusNumberSansTopuGetRandom'>{data.plusNumber} </p>
               </Stack>
             ) : (<p></p>)
