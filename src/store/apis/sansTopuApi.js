@@ -27,7 +27,7 @@ const sansTopuApi = createApi ({
                 providesTags:['SansTopu'],
                 query: () => {
                     return {
-                        url : '/api/sanstopu/GetRandomNumbersForSayisalLotoAsync',
+                        url : '/api/sanstopu/GetRandomNumbersForSansTopuAsync',
                         method : 'GET'
                     };
                 },
