@@ -2,6 +2,7 @@ import React from 'react';
 import { Stack, Skeleton, Box, Card, CardActions, CardContent, CardMedia, Typography, Grid } from '@mui/material';
 import {formatDate} from './dateUtils';
 import image from '../assets/sansTopuLogo.png'
+import '../styles/sansTopuItem.css';
 
 function SansTopuItem({sansTopu}) {
   return (
@@ -23,8 +24,8 @@ function SansTopuItem({sansTopu}) {
                 <p>{sansTopu.Numbers[3]}</p>
                 <p>{sansTopu.Numbers[4]}</p>
               </Stack>
-              <Stack>
-                <p className='plusNumberSansTopuItem'>+</p>
+              <Stack direction="row">
+                <p className='plusSansTopuItem'>+</p>
                 <p className='plusNumberSansTopuItem'>{sansTopu.PlusNumber}</p>
               </Stack>
             </Stack>
