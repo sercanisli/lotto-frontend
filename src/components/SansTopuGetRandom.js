@@ -16,7 +16,6 @@ function SansTopuGetRandom() {
     });
   };
 
-  console.log(data);
 
   return (
     <Stack >

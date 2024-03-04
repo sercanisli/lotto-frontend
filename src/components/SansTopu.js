@@ -48,18 +48,12 @@ function SansTopu() {
     pageSize:10,
     pageNumber:selectedPage
   }
-
-  console.log(lastOne);
-
-  console.log(totalPage);
-
   const {data, isError, isFetching} = useFetchSansTopuQuery(page);
         if(isFetching || data  === undefined){
             return (
               <CircularProgress className='spinnerSansTopu' />
             )
         }
-    console.log(data);
 
     const Item = styled(Paper)(({ theme }) => ({
       backgroundColor: theme.palette.mode === 'dark' ? '#1A2027' : '#fff',
@@ -78,15 +72,15 @@ function SansTopu() {
                 </Grid>
                 <Grid item xs={12} md={6}>
                     <Typography className='headlinesSansTopu' variant='h4'>Son Çekiliş</Typography>
-                    <Item className='lastItemSayisalLoto'><SansTopuLastItem lastSansTopu = {lastOne}/></Item>
+                    <Item className='lastItemSansTopu'><SansTopuLastItem lastSansTopu = {lastOne}/></Item>
                 </Grid>
-                <Grid item xs={12} md={12} >
+                <Grid item xs={12} md={12} > 
                     <Typography className='headlinesSansTopu' variant='h5'>Tüm Çekilişler</Typography>
                     <Pagination className='paginateSansTopu' count={totalPage} color="primary" page={selectedPage}  onChange={handlePageChange}/>
                     <Item className='itemsSansTopu'  >
                         {
-                            data.map((sanstopu) => {
-                                return <SansTopuItem key={sanstopu.id} sanstopu = {sanstopu} />
+                            data.map((sansTopu) => {
+                                return <SansTopuItem key={sansTopu.id} sansTopu = {sansTopu} />
                             })
                         }
                     </Item>

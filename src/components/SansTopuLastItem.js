@@ -15,7 +15,7 @@ function SansTopuLastItem({lastSansTopu}) {
   
   return (
     <>
-    <Stack direction="row">
+    <Stack className='sansTopuLastItem' direction="row">
       <Stack direction="row" className='numbersSansTopuLastItem'>
             <p>{lastSansTopu.Numbers[0]}</p>
             <p>{lastSansTopu.Numbers[1]}</p>
@@ -25,7 +25,7 @@ function SansTopuLastItem({lastSansTopu}) {
       </Stack>
       <Stack direction="row">
         <p className='plusSansTopuLastItem'>+</p>
-        <p className='plusNumberSansTopuLasItem'>{lastSansTopu.PlusNumber}</p>
+        <p className='plusNumberSansTopuLastItem'>{lastSansTopu.PlusNumber}</p>
       </Stack>
     </Stack>
       

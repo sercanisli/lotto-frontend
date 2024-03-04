@@ -11,7 +11,7 @@ function SayisalLotoLastItem({lastSayisalLoto}) {
 }
   const date = formatDate(lastSayisalLoto.Date);
   return (
-    <>
+    <> 
         <Stack direction="row" className='numbersSayisalLotoLastItem'>
             <p>{lastSayisalLoto.Numbers[0]}</p>
             <p>{lastSayisalLoto.Numbers[1]}</p>
