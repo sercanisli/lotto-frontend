@@ -10,6 +10,7 @@ import { Typography, CircularProgress} from '@mui/material';
 import SansTopuGetRandom from './SansTopuGetRandom';
 import SansTopuLastItem from './SansTopuLastItem';
 import SansTopuItem from './SansTopuItem';
+import '../styles/sansTopu.css';
 
 
 

@@ -1,0 +1,37 @@
+.containerSansTopu {
+    padding: 0px 200px;
+    margin-bottom: 100px;
+}
+
+.lastItemSansTopu{
+    height: 139px !important;
+}
+
+.spinnerSansTopu{
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.gridSansTopu {
+    margin-bottom: 25px;
+}
+
+.headlinesSansTopu {
+    display: flex;
+    justify-content: center;
+    margin-top: 50px;
+    margin-bottom: 25px;
+}
+
+.itemsSansTopu {
+    display: flex;
+    flex-wrap: wrap;
+    border: 1px solid black;
+}
+.paginateSansTopu {
+    display: flex;
+    justify-content: center;
+    margin-top: 25px;
+}
