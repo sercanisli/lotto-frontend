@@ -45,5 +45,5 @@ const sayisalLotoApi = createApi ({
     },
 });
 
-export const { useFetchSayisalLotoQuery, useGetRandomNumbersForSayisalLotoQuery } = sayisalLotoApi;
+export const { useFetchSayisalLotoQuery, useGetRandomNumbersForSayisalLotoQuery, useGetSayisalLotoLastItemQuery } = sayisalLotoApi;
 export { sayisalLotoApi };

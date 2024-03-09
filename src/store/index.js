@@ -30,6 +30,6 @@ export const store = configureStore({
 setupListeners(store.dispatch);
 
 export { useFetchSuperLotoQuery, useAddSuperLotoMutation, useRemoveSuperLotoMutation, useGetRandomNumbersForSuperLotoQuery } from './apis/superLotoApi';
-export { useFetchSayisalLotoQuery, useGetRandomNumbersForSayisalLotoQuery } from './apis/sayisalLotoApi';
+export { useFetchSayisalLotoQuery, useGetRandomNumbersForSayisalLotoQuery, useGetSayisalLotoLastItemQuery } from './apis/sayisalLotoApi';
 export { useFetchOnNumaraQuery, useGetRandomNumbersForOnNumaraQuery } from './apis/onNumaraApi';
 export { useFetchSansTopuQuery, useGetRandomNumbersForSansTopuQuery } from './apis/sansTopuApi';
