@@ -2,7 +2,9 @@ import React from 'react';
 import '../styles/home.css';
 import Grid from '@mui/material/Grid';
 import { Typography, CircularProgress, Stack} from '@mui/material';
-
+import SayisalLotoLastItem from './SayisalLotoLastItem';
+import { styled } from '@mui/material/styles';
+import Paper from '@mui/material/Paper';
 
 function Home() {
 
@@ -21,8 +23,7 @@ function Home() {
       </Stack>
       <Stack>
           <Grid item xs={12} md={6}>
-          <Typography className='headlinesSayisalLoto' variant='h4'>Son Çekiliş</Typography>
-          <Item className='lastItemSayisalLoto'><SayisalLotoLastItem lastSayisalLoto = {lastOne}/></Item>
+          <Item className=''><SayisalLotoLastItem/></Item>
         </Grid>
       </Stack>
     </Stack>
