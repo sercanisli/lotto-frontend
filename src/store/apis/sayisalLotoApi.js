@@ -31,6 +31,15 @@ const sayisalLotoApi = createApi ({
                         method: 'GET'
                     };
                 },
+            }),
+            getSayisalLotoLastItem:builder.query({
+                providesTags:['SayisalLoto'],
+                query: () => {
+                    return {
+                        url:'/api/sayisalloto/GetSayisalLotoLastItemAsync',
+                        method : 'GET'
+                    }
+                }
             })
         };
     },
