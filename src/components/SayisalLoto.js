@@ -14,8 +14,6 @@ import SayisalLotoItem from './SayisalLotoItem';
 
 
 function SayisalLoto() {
-
-  const [lastOne, setLastOne] = useState(null);
   const [totalPage, setTotalPage] = useState(null);
   const [selectedPage, setSelectedPage] = useState(1);
 
@@ -30,8 +28,6 @@ function SayisalLoto() {
         }
     })
       .then(response => {
-        const lastOneData = response.data[0];
-        setLastOne(lastOneData);
         const xPaginationHeader = response.headers['x-pagination'];
         const xPaginationData = JSON.parse(xPaginationHeader);
         const totalPage = xPaginationData.TotalPage;
@@ -75,7 +71,7 @@ function SayisalLoto() {
                 </Grid>
                 <Grid item xs={12} md={6}>
                     <Typography className='headlinesSayisalLoto' variant='h4'>Son Çekiliş</Typography>
-                    <Item className='lastItemSayisalLoto'><SayisalLotoLastItem lastSayisalLoto = {lastOne}/></Item>
+                    <Item className='lastItemSayisalLoto'><SayisalLotoLastItem/></Item>
                 </Grid>
                 <Grid item xs={12} md={12} >
                     <Typography className='headlinesSayisalLoto' variant='h5'>Tüm Çekilişler</Typography>

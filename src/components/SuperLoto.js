@@ -16,7 +16,6 @@ function SuperLoto() {
 
     const [totalPage, setTotalPage] = useState(null);
     const [selectedPage, setSelectedPage] = useState(1);
-    const [lastOne, setLastOne] = useState(null);
 
     const handlePageChange = (event, page) => {
         setSelectedPage(page);
@@ -29,8 +28,6 @@ function SuperLoto() {
             }
         })
           .then(response => {
-            const lastOneData = response.data[0];
-            setLastOne(lastOneData);
             const xPaginationHeader = response.headers['x-pagination'];
             const xPaginationData = JSON.parse(xPaginationHeader);
             const totalPage = xPaginationData.TotalPage;
@@ -71,7 +68,7 @@ function SuperLoto() {
                 </Grid>
                 <Grid item xs={12} md={6}>
                     <Typography className='headlinesSuperLoto' variant='h4'>Son Çekiliş</Typography>
-                    <Item className='lastItemSuperLoto'><SuperLotoLastItem lastSuperLoto={lastOne}/></Item>
+                    <Item className='lastItemSuperLoto'><SuperLotoLastItem/></Item>
                 </Grid>
                 <Grid item xs={12} md={12} >
                     <Typography className='headlinesSuperLoto' variant='h5'>Tüm Çekilişler</Typography>
