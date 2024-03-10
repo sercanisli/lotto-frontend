@@ -22,7 +22,7 @@ function Home() {
         Kazandıracak Numaralar Açıklaması
       </Stack>
       <Stack>
-          <Grid item xs={12} md={6}>
+        <Grid item xs={12} md={6}>
           <Item className=''><SayisalLotoLastItem/></Item>
         </Grid>
       </Stack>
