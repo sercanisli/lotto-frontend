@@ -3,6 +3,7 @@ import '../styles/home.css';
 import Grid from '@mui/material/Grid';
 import { Typography, CircularProgress, Stack} from '@mui/material';
 import SayisalLotoLastItem from './SayisalLotoLastItem';
+import SuperLotoLastItem from './SuperLotoLastItem';
 import { styled } from '@mui/material/styles';
 import Paper from '@mui/material/Paper';
 
@@ -24,6 +25,11 @@ function Home() {
       <Stack>
         <Grid item xs={12} md={6}>
           <Item className=''><SayisalLotoLastItem/></Item>
+        </Grid>
+      </Stack>
+      <Stack>
+        <Grid item xs={12} md={6}>
+          <Item className=''><SuperLotoLastItem/></Item>
         </Grid>
       </Stack>
     </Stack>
