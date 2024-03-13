@@ -31,6 +31,15 @@ const onNumaraApi = createApi ({
                         method: 'GET'
                     };
                 },
+            }),
+            getOnNumaraLastItem:builder.query({
+                providesTags:['OnNumara'],
+                query:() => {
+                    return {
+                        url:'/api/onnumara/GetOnNumaraLastItemAsync',
+                        method : 'GET'
+                    }
+                }
             })
         };
     },
