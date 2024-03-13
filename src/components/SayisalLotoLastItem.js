@@ -8,7 +8,7 @@ function SayisalLotoLastItem() {
 
   const {data, isError, isFetching} = useGetSayisalLotoLastItemQuery();
   console.log(data);
-
+ 
   if (!data) {
     return (
         <p><CircularProgress /></p>
