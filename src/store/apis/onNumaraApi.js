@@ -45,5 +45,5 @@ const onNumaraApi = createApi ({
     },
 });
 
-export const { useFetchOnNumaraQuery, useGetRandomNumbersForOnNumaraQuery } = onNumaraApi;
+export const { useFetchOnNumaraQuery, useGetRandomNumbersForOnNumaraQuery, useGetOnNumaraLastItemQuery } = onNumaraApi;
 export {onNumaraApi};
