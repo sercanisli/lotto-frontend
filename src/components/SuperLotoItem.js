@@ -44,9 +44,4 @@ function SuperLotoItem({}) {
 
   )
 }
-{/* <Skeleton
-            width={800}
-            height={250}
-            animation='wave'
-         /> */}
 export default SuperLotoItem
