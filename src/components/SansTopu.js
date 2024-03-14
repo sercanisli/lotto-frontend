@@ -16,7 +16,6 @@ import '../styles/sansTopu.css';
 
 function SansTopu() {
 
-  const [lastOne, setLastOne] = useState(null);
   const [totalPage, setTotalPage] = useState(null);
   const [selectedPage, setSelectedPage] = useState(1);
 
@@ -32,8 +31,6 @@ function SansTopu() {
         }
     })
       .then(response => {
-        const lastOneData = response.data[0];
-        setLastOne(lastOneData);
         const xPaginationHeader = response.headers['x-pagination'];
         const xPaginationData = JSON.parse(xPaginationHeader);
         const totalPage = xPaginationData.TotalPage;
@@ -72,7 +69,7 @@ function SansTopu() {
                 </Grid>
                 <Grid item xs={12} md={6}>
                     <Typography className='headlinesSansTopu' variant='h4'>Son Çekiliş</Typography>
-                    <Item className='lastItemSansTopu'><SansTopuLastItem lastSansTopu = {lastOne}/></Item>
+                    <Item className='lastItemSansTopu'><SansTopuLastItem /></Item>
                 </Grid>
                 <Grid item xs={12} md={12} > 
                     <Typography className='headlinesSansTopu' variant='h5'>Tüm Çekilişler</Typography>
