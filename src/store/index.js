@@ -32,4 +32,4 @@ setupListeners(store.dispatch);
 export { useFetchSuperLotoQuery, useAddSuperLotoMutation, useRemoveSuperLotoMutation, useGetRandomNumbersForSuperLotoQuery, useGetSuperLotoLastItemQuery } from './apis/superLotoApi';
 export { useFetchSayisalLotoQuery, useGetRandomNumbersForSayisalLotoQuery, useGetSayisalLotoLastItemQuery } from './apis/sayisalLotoApi';
 export { useFetchOnNumaraQuery, useGetRandomNumbersForOnNumaraQuery, useGetOnNumaraLastItemQuery } from './apis/onNumaraApi';
-export { useFetchSansTopuQuery, useGetRandomNumbersForSansTopuQuery } from './apis/sansTopuApi';
+export { useFetchSansTopuQuery, useGetRandomNumbersForSansTopuQuery, useGetSansTopuLastItemQuery } from './apis/sansTopuApi';

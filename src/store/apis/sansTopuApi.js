@@ -31,10 +31,19 @@ const sansTopuApi = createApi ({
                         method : 'GET'
                     };
                 },
+            }),
+            getSansTopuLastItem:builder.query({
+                providesTags:['SansTopu'],
+                query : () => {
+                    return {
+                        url : '/api/sanstopu/GetSansTopuLastItemAsync',
+                        method : 'GET'
+                    }
+                }
             })
         };
     },
 });
 
-export const { useFetchSansTopuQuery, useGetRandomNumbersForSansTopuQuery} = sansTopuApi;
+export const { useFetchSansTopuQuery, useGetRandomNumbersForSansTopuQuery, useGetSansTopuLastItemQuery} = sansTopuApi;
 export {sansTopuApi};
