@@ -2,3 +2,9 @@
     padding: 0px 200px;
     margin-bottom: 100px;
 }
+
+.homeLottosContainer {
+    display: flex;
+    flex-wrap: wrap;
+    border: 1px solid black;
+}

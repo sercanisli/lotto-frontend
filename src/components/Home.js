@@ -1,12 +1,13 @@
 import React from 'react';
 import '../styles/home.css';
 import Grid from '@mui/material/Grid';
-import { Typography, CircularProgress, Stack} from '@mui/material';
+import { Typography, Box, Stack, CardContent, CardMedia} from '@mui/material';
 import SayisalLotoLastItem from './SayisalLotoLastItem';
 import SuperLotoLastItem from './SuperLotoLastItem';
 import OnNumaraLastItem from './OnNumaraLastItem';
 import { styled } from '@mui/material/styles';
 import Paper from '@mui/material/Paper';
+import SansTopuLastItem from './SansTopuLastItem';
 
 function Home() {
 
@@ -19,26 +20,27 @@ function Home() {
   }));
 
   return (
-    <Stack>
+    <Box>
       <Stack>
         Kazandıracak Numaralar Açıklaması
       </Stack>
-      <Stack>
-        <Grid item xs={12} md={6}>
-          <Item className=''><SayisalLotoLastItem/></Item>
-        </Grid>
-      </Stack>
-      <Stack>
-        <Grid item xs={12} md={6}>
-          <Item className=''><SuperLotoLastItem/></Item>
-        </Grid>
-      </Stack>
-      <Stack>
-        <Grid item xs={12} md={6}>
-          <Item className=''><OnNumaraLastItem/></Item>
-        </Grid>
-      </Stack>
-    </Stack>
+      <Grid container className='homeLottosContainer'>
+          <Grid item xs={12} md={6}>
+            <Item className=''>
+              <SayisalLotoLastItem/>
+            </Item>
+          </Grid>
+          <Grid item xs={12} md={6}>
+            <Item className=''><SuperLotoLastItem/></Item>
+          </Grid>
+          <Grid item xs={12} md={6}>
+            <Item className=''><OnNumaraLastItem/></Item>
+          </Grid>
+          <Grid item xs={12} md={6}>
+            <Item className=''><SansTopuLastItem/></Item>
+          </Grid>
+      </Grid>
+    </Box>
   )
 }
 
