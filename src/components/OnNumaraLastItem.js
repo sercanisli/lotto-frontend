@@ -1,10 +1,10 @@
-import { CircularProgress, Stack, Typography } from '@mui/material';
+import { CircularProgress, Stack, Typography, CardMedia, CardContent } from '@mui/material';
 import React from 'react';
 import '../styles/onNumaraLastItem.css';
 import {formatDate} from './dateUtils';
 import { use } from '../store/apis/onNumaraApi';
 import { useGetOnNumaraLastItemQuery } from '../store/apis/onNumaraApi';
-
+import image from'../assets/onNumaraLogo.png';
 
 function OnNumaraLastItem() {
   const {data, isError, isFetching} = useGetOnNumaraLastItemQuery();
@@ -30,13 +30,20 @@ function OnNumaraLastItem() {
               ))}
             </Stack>
           </Typography>
-          {
-          data.date ? (
-            <p className='dateOnNumaraLastItem'> Tarih : {date}</p>
-            ) : (
-              <p><CircularProgress/></p>
-            )
-          }
+          <Stack direction="row" className='imageAndDate'>
+            <CardContent>
+                <CardMedia className='imageOnNumaraLastItem' component="img" image={image} />
+            </CardContent>
+            <Stack className='dateOnNumaraLastItem'>
+                {
+                  data.date ? (
+                    <p > Tarih : {date}</p>
+                    ) : (
+                      <p><CircularProgress/></p>
+                    )
+                }
+            </Stack>
+          </Stack>
       </>
       
     )
