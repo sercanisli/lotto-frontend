@@ -22,7 +22,23 @@
  
  .dateSuperLotoLastItem {
     display: flex;
-    justify-content: end;
-    padding-right: 85px;
-        
+    justify-content: center;
 }
+
+.imageAndDate {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+ 
+  .imageSuperLotoLastItem{
+    width: 50px;
+    height: 25px;
+  }
+  
+  .dateSuperLotoLastItem {
+     display: flex;
+     flex-direction: column;
+     align-items: center !important;
+     margin-top: 20px;
+ }

@@ -1,8 +1,9 @@
-import { CircularProgress, Stack, Typography } from '@mui/material';
+import { CircularProgress, Stack, Typography, CardMedia, CardContent } from '@mui/material';
 import React from 'react';
 import '../styles/superLotoLastItem.css';
 import {formatDate} from './dateUtils';
 import { useGetSuperLotoLastItemQuery } from '../store/apis/superLotoApi';
+import image from '../assets/superlotoLogo.jpg';
 
 function SuperLotoLastItem() {
 
@@ -26,13 +27,20 @@ function SuperLotoLastItem() {
             <p>{data.numbers[4]}</p>
             <p>{data.numbers[5]}</p>
         </Stack>
-        {
-        data.date ? (
-          <p className='dateSuperLotoLastItem'> Tarih : {date}</p>
-          ) : (
-            <p><CircularProgress/></p>
-          )
-        }
+        <Stack direction="row" className='imageAndDate'>
+            <CardContent>
+                <CardMedia className='imageSuperLotoLastItem' component="img" image={image} />
+            </CardContent>
+            <Stack className='dateSuperLotoLastItem'>
+                {
+                  data.date ? (
+                    <p > Tarih : {date}</p>
+                    ) : (
+                      <p><CircularProgress/></p>
+                    )
+                }
+            </Stack>
+          </Stack>
     </>
     
   )
