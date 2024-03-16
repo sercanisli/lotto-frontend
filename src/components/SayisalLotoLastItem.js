@@ -1,8 +1,9 @@
-import { CircularProgress, Stack, Typography } from '@mui/material';
+import { CircularProgress, Stack, Typography, CardContent, CardMedia } from '@mui/material';
 import React from 'react';
 import '../styles/sayisalLotoLastItem.css';
 import {formatDate} from './dateUtils';
 import { useGetSayisalLotoLastItemQuery } from '../store/apis/sayisalLotoApi';
+import image from '../assets/sayisalLoto.png';
 
 function SayisalLotoLastItem() {
 
@@ -25,13 +26,20 @@ function SayisalLotoLastItem() {
             <p>{data.numbers[4]}</p>
             <p>{data.numbers[5]}</p>
         </Stack>
-        {
-        data.date ? (
-          <p className='dateSayisalLotoLastItem'> Tarih : {date}</p>
-          ) : (
-            <p><CircularProgress/></p>
-          )
-        }
+        <Stack direction="row" className='imageAndDate'>
+            <CardContent>
+                <CardMedia className='imageSayisalLotoLastItem' component="img" image={image} />
+            </CardContent>
+            <Stack className='dateSayisalLotoLastItem'>
+                {
+                  data.date ? (
+                    <p > Tarih : {date}</p>
+                    ) : (
+                      <p><CircularProgress/></p>
+                    )
+                }
+            </Stack>
+          </Stack>
     </>
     
   )
