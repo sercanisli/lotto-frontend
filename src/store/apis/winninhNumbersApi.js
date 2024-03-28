@@ -23,6 +23,9 @@ const winningNumbersApi = createApi({
                     };
                 },
             }),
-        }
-    }
-})
+        };
+    },
+});
+
+export const { useFetchWinningNumbersQuery } = winningNumbersApi;
+export {winningNumbersApi};
