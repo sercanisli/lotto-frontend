@@ -3,7 +3,7 @@ import { Stack, Skeleton, Box, Card, CardActions, CardContent, CardMedia, Typogr
 import image from '../assets/onNumaraLogo.png';
 import {formatDate} from './dateUtils';
 import '../styles/onNumaraItem.css';
-
+ 
 
 function OnNumaraItem({onNumara}) {
   return (

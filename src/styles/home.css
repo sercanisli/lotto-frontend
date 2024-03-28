@@ -3,8 +3,22 @@
     margin-bottom: 100px;
 }
 
+.lastLottosHead {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+
+.lastLottosHead {
+    font-size: 35px;
+}
+
 .homeLottosContainer {
     display: flex;
+    align-items: center;
     flex-wrap: wrap;
     border: 1px solid black;
+    border: none;
+    padding: 100px;
 }
