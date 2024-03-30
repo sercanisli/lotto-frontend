@@ -2,6 +2,7 @@ import React from 'react'
 import { useEffect, useState } from 'react';
 import { useFetchWinningNumbersQuery} from '../store/apis/winningNumbersApi';
 import { Typography, CircularProgress} from '@mui/material';
+import '../styles/winningNumbers.css'
 
 const WinningNumbers = () => {
     const [id, setId] = useState(1)
@@ -13,7 +14,9 @@ const WinningNumbers = () => {
     }
     console.log(data);
   return (
-    <div>WinningNumbers</div>
+    <div className='winningNumbersDiv'>
+      <p>{data.description}</p>
+    </div>
   )
 }
 
