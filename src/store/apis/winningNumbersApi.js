@@ -18,7 +18,7 @@ const winningNumbersApi = createApi({
                 providesTags:['WinningNumbers'],
                 query : (id) => {
                     return {
-                        url : `/api/winningnumbers/GetOneWinningNumbersAsync/${id}`,
+                        url : `/api/winningnumbers/${id}`,
                         method : 'GET'
                     };
                 },

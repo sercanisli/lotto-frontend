@@ -10,6 +10,7 @@ import Home from './components/Home';
 import SignIn from './components/SignIn';
 import Login from './features/authentication/Login';
 import RequireAuth from './features/authentication/RequireAuth';
+import WinningNumbers from './components/WinningNumbers';
 
 function App() {
   return (
@@ -23,6 +24,7 @@ function App() {
         <Route path='onnumara' exact element={<OnNumara />} />
         <Route path='sanstopu' exact element={<SansTopu />} />
         <Route path='login' exact element={<Login />}/>
+        <Route path='winningnumbers' exact element={<WinningNumbers />} />
 
         {/* protected routes */}
         <Route element={<RequireAuth />} />

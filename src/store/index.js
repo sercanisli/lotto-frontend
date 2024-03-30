@@ -4,7 +4,7 @@ import { superLotoApi } from './apis/superLotoApi';
 import { sayisalLotoApi } from './apis/sayisalLotoApi';
 import { onNumaraApi } from "./apis/onNumaraApi";
 import { sansTopuApi } from './apis/sansTopuApi';
-import { winningNumbersApi} from './apis/winninhNumbersApi';
+import { winningNumbersApi} from './apis/winningNumbersApi';
 import { authenticationApi } from "./apis/authenticationApi";
 import authReducer from '../features/authentication/authenticationSlice'
  
@@ -36,4 +36,4 @@ export { useFetchSuperLotoQuery, useAddSuperLotoMutation, useRemoveSuperLotoMuta
 export { useFetchSayisalLotoQuery, useGetRandomNumbersForSayisalLotoQuery, useGetSayisalLotoLastItemQuery } from './apis/sayisalLotoApi';
 export { useFetchOnNumaraQuery, useGetRandomNumbersForOnNumaraQuery, useGetOnNumaraLastItemQuery } from './apis/onNumaraApi';
 export { useFetchSansTopuQuery, useGetRandomNumbersForSansTopuQuery, useGetSansTopuLastItemQuery } from './apis/sansTopuApi';
-export { useFetchWinningNumbersQuery } from './apis/winninhNumbersApi';
+export { useFetchWinningNumbersQuery } from './apis/winningNumbersApi';
