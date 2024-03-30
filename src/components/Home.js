@@ -8,6 +8,7 @@ import OnNumaraLastItem from './OnNumaraLastItem';
 import { styled } from '@mui/material/styles';
 import Paper from '@mui/material/Paper';
 import SansTopuLastItem from './SansTopuLastItem';
+import WinningNumbers from './WinningNumbers';
 
 function Home() {
 
@@ -22,7 +23,7 @@ function Home() {
   return (
     <Box>
       <Stack>
-        Kazandıracak Numaralar Açıklaması
+       <WinningNumbers />
       </Stack>
       <Grid container className='homeLottosContainer' spacing={2}>
           <Grid item xs={12} md={6}>
