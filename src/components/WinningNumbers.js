@@ -15,6 +15,7 @@ const WinningNumbers = () => {
     console.log(data);
   return (
     <div className='winningNumbersDiv'>
+      <h3 className='winningNumbersTitle'>{data.title}</h3>
       <p>{data.description}</p>
     </div>
   )

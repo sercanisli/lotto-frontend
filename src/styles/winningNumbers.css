@@ -6,5 +6,15 @@
 }
 
 .winningNumbersDiv{
-    padding: 75px;
+    padding-left: 75px;
+    padding-bottom: 75px;
+    padding-right: 75px;
+}
+
+.winningNumbersTitle {
+    justify-content: center;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    margin-bottom: 25px;
 }

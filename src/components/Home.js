@@ -25,6 +25,7 @@ function Home() {
       <Stack>
        <WinningNumbers />
       </Stack>
+      <h3 className='homeTitle'>Son Çekilişler</h3>
       <Grid container className='homeLottosContainer' spacing={2}>
           <Grid item xs={12} md={6}>
             <Item className=''>
