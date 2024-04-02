@@ -18,7 +18,7 @@ const sansTopuApi = createApi ({
                 providesTags:['SansTopu'],
                 query: (page) => {
                     return {
-                        url:`/api/sanstopu/GetAllNumbersArrayForOnNumaraAsync/?pageSize=${page.pageSize}&pageNumber=${page.pageNumber}`,
+                        url:`/api/sanstopu/GetAllNumbersArrayForSansTopuAsync/?pageSize=${page.pageSize}&pageNumber=${page.pageNumber}`,
                         method:'GET',
                     };
                 },
