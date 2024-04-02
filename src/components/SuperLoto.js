@@ -45,7 +45,7 @@ function SuperLoto() {
       }
       
         const {data, isError, isFetching} = useFetchSuperLotoQuery(page);
-        if(isFetching){
+        if(isFetching || data  === undefined){
             return (
               <CircularProgress className='spinnerSuperLoto' />
             )

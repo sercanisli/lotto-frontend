@@ -18,7 +18,7 @@ const sayisalLotoApi = createApi ({
                 providesTags:['SayisalLoto'],
                 query : (page) => {
                     return {
-                        url :`/api/sayisalloto?pageSize=${page.pageSize}&pageNumber=${page.pageNumber}`,
+                        url :`/api/sayisalloto/GetAllNumbersArrayForSayisalLotoAsync/?pageSize=${page.pageSize}&pageNumber=${page.pageNumber}`,
                         method:'GET',
                     }; 
                 },

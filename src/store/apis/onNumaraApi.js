@@ -18,7 +18,7 @@ const onNumaraApi = createApi ({
                 providesTags:['OnNumara'],
                 query : (page) => {
                     return {
-                        url:`/api/onnumara?pageSize=${page.pageSize}&pageNumber=${page.pageNumber}`,
+                        url:`/api/onnumara/GetAllNumbersArrayForOnNumaraAsync/?pageSize=${page.pageSize}&pageNumber=${page.pageNumber}`,
                         method : 'GET',
                     };
                 },
