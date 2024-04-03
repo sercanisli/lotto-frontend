@@ -22,7 +22,7 @@ function SayisalLoto() {
   };
 
   useEffect(() => {
-    axios.get(`https://localhost:7135/api/sayisalloto?pageSize=${page.pageSize}&pageNumber=${page.pageNumber}`, {
+    axios.get(`https://localhost:7135/api/sayisalloto/GetAllNumbersArrayForSayisalLotoAsync/?pageSize=${page.pageSize}&pageNumber=${page.pageNumber}`, {
         headers: {
             'Accept':'application/json'
         }

@@ -22,7 +22,7 @@ function SuperLoto() {
     };
 
     useEffect(() => {
-        axios.get(`https://localhost:7135/api/superloto?pageSize=${page.pageSize}&pageNumber=${page.pageNumber}`, {
+        axios.get(`https://localhost:7135/api/superloto/GetAllNumbersArrayForSuperLotoAsync/?pageSize=${page.pageSize}&pageNumber=${page.pageNumber}`, {
             headers: {
                 'Accept':'application/json'
             }
@@ -45,6 +45,7 @@ function SuperLoto() {
       }
       
         const {data, isError, isFetching} = useFetchSuperLotoQuery(page);
+        console.log(data);
         if(isFetching || data  === undefined){
             return (
               <CircularProgress className='spinnerSuperLoto' />

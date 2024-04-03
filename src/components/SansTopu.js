@@ -25,7 +25,7 @@ function SansTopu() {
   };
 
   useEffect(() => {
-    axios.get(`https://localhost:7135/api/sanstopu?pageSize=${page.pageSize}&pageNumber=${page.pageNumber}`, {
+    axios.get(`https://localhost:7135/api/sanstopu/GetAllNumbersArrayForSansTopuAsync/?pageSize=${page.pageSize}&pageNumber=${page.pageNumber}`, {
         headers: {
             'Accept':'application/json'
         }

@@ -22,7 +22,7 @@ function OnNumara() {
   };
 
   useEffect(() => {
-    axios.get(`https://localhost:7135/api/onnumara?pageSize=${page.pageSize}&pageNumber=${page.pageNumber}`, {
+    axios.get(`https://localhost:7135/api/onnumara/GetAllNumbersArrayForOnNumaraAsync/?pageSize=${page.pageSize}&pageNumber=${page.pageNumber}`, {
         headers: {
             'Accept':'application/json'
         }
