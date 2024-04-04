@@ -5,7 +5,7 @@ function Footer() {
   return (
     <div className='footer'>
         <div>
-            <p>
+            <p className='footerDescription'>
                 Tüm hakları saklıdır | Lotocum
             </p>
         </div>

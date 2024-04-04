@@ -3,7 +3,6 @@ import { Stack, CircularProgress, Skeleton, Box, Card, CardActions, CardContent,
 import image from '../assets/superlotoLogo.jpg';
 import '../styles/superLotoItem.css';
 import {formatDate} from './dateUtils';
-import { useGetSuperLotoLastItemQuery } from '../store/apis/superLotoApi';
   
 function SuperLotoItem({superLoto}) {
 
