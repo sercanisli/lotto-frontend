@@ -49,7 +49,9 @@ function OnNumara() {
   const {data, isError, isFetching} = useFetchOnNumaraQuery(page);
         if(isFetching || data  === undefined){
             return (
-              <CircularProgress className='spinnerOnNumara' />
+              <Box  style={{ width: '100%', height: '100vh' }} >
+                <CircularProgress className='spinnerOnNumara' />
+              </Box>
             )
         }
     console.log(data);
