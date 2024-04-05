@@ -48,7 +48,9 @@ function SansTopu() {
   const {data, isError, isFetching} = useFetchSansTopuQuery(page);
         if(isFetching || data  === undefined){
             return (
-              <CircularProgress className='spinnerSansTopu' />
+              <Box  style={{ width: '100%', height: '100vh' }} >
+                <CircularProgress className='spinnerSansTopu' />
+              </Box>
             )
         }
 
