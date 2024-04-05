@@ -48,7 +48,9 @@ function SuperLoto() {
         console.log(data);
         if(isFetching || data  === undefined){
             return (
-              <CircularProgress className='spinnerSuperLoto' />
+                <Box  style={{ width: '100%', height: '100vh' }} >
+                    <CircularProgress className='spinnerSuperLoto' />
+                </Box>
             )
         }
     
