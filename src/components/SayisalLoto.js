@@ -48,7 +48,9 @@ function SayisalLoto() {
   const {data, isError, isFetching} = useFetchSayisalLotoQuery(page);
         if(isFetching || data  === undefined){
             return (
-              <CircularProgress className='spinnerSayisalLoto' />
+              <Box  style={{ width: '100%', height: '100vh' }} >
+                <CircularProgress className='spinnerSayisalLoto' />
+              </Box>
             )
         }
     console.log(data);
