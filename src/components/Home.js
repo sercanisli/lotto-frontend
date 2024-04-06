@@ -1,7 +1,7 @@
 import React from 'react';
 import '../styles/home.css';
 import Grid from '@mui/material/Grid';
-import { Typography, Box, Stack, CardContent, CardMedia} from '@mui/material';
+import {Box, Stack} from '@mui/material';
 import SayisalLotoLastItem from './SayisalLotoLastItem';
 import SuperLotoLastItem from './SuperLotoLastItem';
 import OnNumaraLastItem from './OnNumaraLastItem';
@@ -21,7 +21,7 @@ function Home() {
   }));
 
   return (
-    <Box>
+    <Box style={{ width: '100%', height: '80vh' }}>
       <Stack>
        <WinningNumbers />
       </Stack>
