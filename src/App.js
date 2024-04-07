@@ -11,6 +11,7 @@ import SignIn from './components/SignIn';
 import Login from './features/authentication/Login';
 import RequireAuth from './features/authentication/RequireAuth';
 import WinningNumbers from './components/WinningNumbers';
+import Admin from './components/Admin';
 
 function App() {
   return (
@@ -25,6 +26,7 @@ function App() {
         <Route path='sanstopu' exact element={<SansTopu />} />
         <Route path='login' exact element={<Login />}/>
         <Route path='winningnumbers' exact element={<WinningNumbers />} />
+        <Route path='admin' exact element={<Admin />}/>
 
         {/* protected routes */}
         <Route element={<RequireAuth />} />

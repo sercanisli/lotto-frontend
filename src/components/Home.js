@@ -21,7 +21,7 @@ function Home() {
   }));
 
   return (
-    <Box style={{ width: '100%', height: '80vh' }}>
+    <Box style={{ width: '100%', height: '100vh' }}>
       <Stack>
        <WinningNumbers />
       </Stack>

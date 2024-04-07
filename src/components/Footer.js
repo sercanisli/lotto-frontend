@@ -6,25 +6,25 @@ function Footer() {
   return (
     <div className='footer'>
       <div className='footerLinks'>
-        <Link to="/">
+        <Link to="/" className='footerLink'>
           Ana Sayfa
         </Link>
-        <Link to="/sayisalloto">
+        <Link to="/sayisalloto" className='footerLink'>
           Sayısal Loto
         </Link>
-        <Link to="/superloto">
+        <Link to="/superloto" className='footerLink'>
           Super Loto
         </Link>
-        <Link to="/onnumara">
+        <Link to="/onnumara" className='footerLink'>
           On Numara
         </Link>
-        <Link to="/sanstopu">
+        <Link to="/sanstopu" className='footerLink'>
           Şans Topu
         </Link>
-        <Link to="/iletisim">
+        <Link to="/iletisim" className='footerLink'>
           İletişim
         </Link>
-        <Link to="/hakkimizda">
+        <Link to="/hakkimizda" className='footerLink'>
           Hakkımızda
         </Link>
       </div>
