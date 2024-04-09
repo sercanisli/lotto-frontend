@@ -6,6 +6,7 @@ import { onNumaraApi } from "./apis/onNumaraApi";
 import { sansTopuApi } from './apis/sansTopuApi';
 import { winningNumbersApi} from './apis/winningNumbersApi';
 import { authenticationApi } from "./apis/authenticationApi";
+import { aboutUsApi } from './apis/aboutUsApi';
 import authReducer from '../features/authentication/authenticationSlice'
  
 export const store = configureStore({
@@ -15,6 +16,7 @@ export const store = configureStore({
         [onNumaraApi.reducerPath]: onNumaraApi.reducer,
         [sansTopuApi.reducerPath]: sansTopuApi.reducer,
         [winningNumbersApi.reducerPath]: winningNumbersApi.reducer,
+        [aboutUsApi.reducerPath]: aboutUsApi.reducer,
         [authenticationApi.reducerPath] : authenticationApi.reducer,
         auth : authReducer
     },
@@ -25,6 +27,7 @@ export const store = configureStore({
             .concat(onNumaraApi.middleware)
             .concat(sansTopuApi.middleware)
             .concat(winningNumbersApi.middleware)
+            .concat(aboutUsApi.middleware)
             .concat(authenticationApi.middleware);
     },
     devTools:true
@@ -37,3 +40,4 @@ export { useFetchSayisalLotoQuery, useGetRandomNumbersForSayisalLotoQuery, useGe
 export { useFetchOnNumaraQuery, useGetRandomNumbersForOnNumaraQuery, useGetOnNumaraLastItemQuery } from './apis/onNumaraApi';
 export { useFetchSansTopuQuery, useGetRandomNumbersForSansTopuQuery, useGetSansTopuLastItemQuery } from './apis/sansTopuApi';
 export { useFetchWinningNumbersQuery } from './apis/winningNumbersApi';
+export { useFetchAboutUsQuery } from './apis/aboutUsApi';
