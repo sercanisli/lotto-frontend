@@ -93,7 +93,7 @@ function ResponsiveDrawer(props) {
             <MenuIcon />
           </IconButton>
           <Typography variant="h6" noWrap component="div">
-            Responsive drawer
+            Admin Dashboard
           </Typography>
         </Toolbar>
       </AppBar>
