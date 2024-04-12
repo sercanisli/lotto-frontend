@@ -8,6 +8,7 @@ import Divider from '@mui/material/Divider';
 import AdminSayisalLoto from './AdminSayisalLoto';
 import AdminSuperLoto from './AdminSuperLoto';
 import AdminOnNumara from './AdminOnNumara';
+import AdminSansTopu from './AdminSansTopu';
 
 export default function SelectedListItem() {
   const [selectedIndex, setSelectedIndex] = React.useState(1);
@@ -24,6 +25,8 @@ export default function SelectedListItem() {
         return <AdminSuperLoto />;
       case 2:
         return <AdminOnNumara />;
+      case 3:
+        return <AdminSansTopu />;
       default:
         return null;
     }
