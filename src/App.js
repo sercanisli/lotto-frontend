@@ -7,11 +7,11 @@ import OnNumara from './components/OnNumara';
 import SansTopu from './components/SansTopu';
 import Footer from './components/Footer';
 import Home from './components/Home';
-import SignIn from './components/SignIn';
 import Login from './features/authentication/Login';
 import RequireAuth from './features/authentication/RequireAuth';
 import WinningNumbers from './components/WinningNumbers';
 import Admin from './components/Admin';
+import AdminSayisalLoto from './components/AdminSayisalLoto';
 
 function App() {
   return (
