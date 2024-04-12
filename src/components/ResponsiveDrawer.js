@@ -6,6 +6,7 @@ import ListItemButton from '@mui/material/ListItemButton';
 import ListItemText from '@mui/material/ListItemText';
 import Divider from '@mui/material/Divider';
 import AdminSayisalLoto from './AdminSayisalLoto';
+import AdminSuperLoto from './AdminSuperLoto';
 
 export default function SelectedListItem() {
   const [selectedIndex, setSelectedIndex] = React.useState(1);
@@ -18,7 +19,8 @@ export default function SelectedListItem() {
     switch (selectedIndex) {
       case 0:
         return <AdminSayisalLoto />;
-      
+      case 1:
+        return <AdminSuperLoto />;
       default:
         return null;
     }
