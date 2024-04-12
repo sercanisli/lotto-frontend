@@ -4,12 +4,12 @@ import { useFetchSayisalLotoQuery } from '../store/apis/sayisalLotoApi';
 import Paper from '@mui/material/Paper';
 import { styled } from '@mui/material/styles';
 import Box from '@mui/material/Box';
-import Pagination from '@mui/material/Pagination';
 import { CircularProgress} from '@mui/material';
-import {Typography, Grid } from '@mui/material';
-import AdminSayisalLotoItem from './AdminSayisalLotoItem';
+import { Stack, Card, CardContent, CardMedia, Typography, Grid } from '@mui/material';
+import {formatDate} from './dateUtils';
+import image from '../assets/sayisalLoto.png'
 
-const AdminSayisalLoto = () => {
+function AdminSayisalLotoItem() {
 
   const [selectedPage, setSelectedPage] = useState(1);
 
@@ -46,22 +46,8 @@ const AdminSayisalLoto = () => {
   }));
 
   return (
-    <Box>
-      <Grid container spacing={2}>
-        <Grid item xs={12} md={12}>
-          <Typography className='headlinesAdminSayisalLoto' variant='h5' >Çekilişler</Typography>
-          <Item className='itemsAdminSayisalLoto'>
-            {
-              data.map((sayisalLoto) => {
-                return <AdminSayisalLotoItem key={sayisalLoto.id} sayisalLoto={sayisalLoto} />
-              })
-            }
-          </Item>
-          <Pagination className='paginateAdminSayisalLoto' count={totalPage} color='primary' page={selectedPage} onChange={handlePageChange}/>
-        </Grid>
-      </Grid>
-    </Box>
+    <div>AdminSayisalLotoItem</div>
   )
 }
 
-export default AdminSayisalLoto
+export default AdminSayisalLotoItem
