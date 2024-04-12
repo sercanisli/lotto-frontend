@@ -6,42 +6,28 @@ import Grid from '@mui/material/Grid';
 import { useFetchSayisalLotoQuery } from '../store/apis/sayisalLotoApi';
 import '../styles/sayisalLoto.css';
 import Pagination, { paginationClasses } from '@mui/material/Pagination';
-import axios from 'axios';
 import { Typography, CircularProgress} from '@mui/material';
 import SayisalLotoGetRandom from './SayisalLotoGetRandom';
 import SayisalLotoLastItem from './SayisalLotoLastItem';
 import SayisalLotoItem from './SayisalLotoItem'; 
+import { useAxiosForSayisalLotoPagination } from './axiosComponents/axiosForSayisalLotoPagination';
 
 
 function SayisalLoto() {
-  const [totalPage, setTotalPage] = useState(null);
   const [selectedPage, setSelectedPage] = useState(1);
 
   const handlePageChange = (event, page) => {
     setSelectedPage(page);
   };
 
-  useEffect(() => {
-    axios.get(`https://localhost:7135/api/sayisalloto/GetAllNumbersArrayForSayisalLotoAsync/?pageSize=${page.pageSize}&pageNumber=${page.pageNumber}`, {
-        headers: {
-            'Accept':'application/json'
-        }
-    })
-      .then(response => {
-        const xPaginationHeader = response.headers['x-pagination'];
-        const xPaginationData = JSON.parse(xPaginationHeader);
-        const totalPage = xPaginationData.TotalPage;
-        setTotalPage(totalPage);
-      })
-      .catch(error => {
-        console.error('Error fetching data:', error);
-      });
-  }, []);
-
+  
   const page = {
     pageSize:10,
     pageNumber:selectedPage
   }
+
+  const totalPage = useAxiosForSayisalLotoPagination(page);
+
 
   console.log(totalPage);
 
@@ -52,7 +38,7 @@ function SayisalLoto() {
                 <CircularProgress className='spinnerSayisalLoto' />
               </Box>
             )
-        }
+        } 
     console.log(data);
     
 

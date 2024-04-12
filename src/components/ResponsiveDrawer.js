@@ -11,7 +11,7 @@ import AdminOnNumara from './AdminOnNumara';
 import AdminSansTopu from './AdminSansTopu';
 
 export default function SelectedListItem() {
-  const [selectedIndex, setSelectedIndex] = React.useState(1);
+  const [selectedIndex, setSelectedIndex] = React.useState(0);
 
   const handleListItemClick = (event, index) => {
     setSelectedIndex(index);
