@@ -7,7 +7,7 @@ import Box from '@mui/material/Box';
 import Pagination from '@mui/material/Pagination';
 import { CircularProgress} from '@mui/material';
 import {Typography, Grid } from '@mui/material';
-import AdminSayisalLotoItem from './AdminSayisalLotoItem';
+import AdminSayisalLotoItem from './AdminSayisalLotoItem'; 
 import '../styles/adminSayisalLoto.css';
 
 const AdminSayisalLoto = () => {

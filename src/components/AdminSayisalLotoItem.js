@@ -1,7 +1,6 @@
 import React from 'react'
-import { Stack, Skeleton, Box, Card, CardActions, CardContent, CardMedia, Typography, Grid } from '@mui/material';
-import image from '../assets/sayisalLoto.png';
-import '../styles/sayisalLotoItem.css';
+import { Stack, Card, CardContent, Typography, Grid } from '@mui/material';
+import '../styles/adminSayisalLotoItem.css';
 import {formatDate} from './dateUtils';
 
 function AdminSayisalLotoItem({sayisalLoto}) {
@@ -9,7 +8,7 @@ function AdminSayisalLotoItem({sayisalLoto}) {
     <Grid container xs={12} md={6} direction="row" alignItems="center" className='gridAdminSayisalLotoItem'>
         <Card className='cardAdminSayisalLotoItem'>
             <CardContent>
-                <Stack direction="row" className='imageAndDateAdminSayisalLotoItem'>
+                <Stack direction="row" className='dateStackAdminSayisalLotoItem'>
                     <Typography className='dateAdminSayisalLotoItem'>
                         Tarih: {formatDate(sayisalLoto.Date)}
                     </Typography>
