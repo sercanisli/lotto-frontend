@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import React, { useState } from 'react';
 import { IconButton, Stack, Button } from '@mui/material';
 import ArrowBackIcon from '@mui/icons-material/ArrowBack';
 import Box from '@mui/material/Box';
@@ -11,60 +11,86 @@ import '../styles/createSayisalLoto.css';
 const CreateSayisalLoto = () => {
     const [adminSayisalLotoPage, setAdminSayisalLotoPage] = useState(false);
     const [arrowBackIcon, setArrowBackIcon] = useState(true);
+    const [numbers, setNumbers] = useState(Array(6).fill(''));
+    const [date, setDate] = useState(null);
 
     const handleClick = () => {
         setAdminSayisalLotoPage(true);
         setArrowBackIcon(false);
     }
-  return (
-    <Box>
-        {
-            arrowBackIcon ? (
+
+    const handleNumberChange = (index, value) => {
+        const newNumbers = [...numbers];
+        newNumbers[index] = value;
+        setNumbers(newNumbers);
+    }
+
+    const handleDateChange = (newDate) => {
+        setDate(newDate);
+    }
+
+    const handleSave = () => {
+        let formattedDate = null;
+    
+        if (date) {
+            formattedDate = date.toISOString().substring(0, 19);
+        }
+    
+        const sayisalLoto = {
+            numbers: numbers.map(num => parseInt(num)),
+            date: formattedDate
+        };
+    
+        console.log(sayisalLoto);
+    
+        setNumbers(Array(6).fill(''));
+        setDate(null);
+    }
+    
+
+    return (
+        <Box>
+            {arrowBackIcon ? (
                 <IconButton onClick={handleClick}>
                     <ArrowBackIcon />
                 </IconButton>
-            ) : (
-                <>
-                </>
-            )
-        }
-        {
-            adminSayisalLotoPage ? (
+            ) : null}
+            {adminSayisalLotoPage ? (
                 <AdminSayisalLoto />
             ) : (
-                <Box >
-                    <Stack direction="row" mt={5} mb={2} >
-                        <label htmlFor="" className='createSayisalLotoLabels'>Numara 1</label>
-                        <label htmlFor="" className='createSayisalLotoLabels'>Numara 2</label>
-                        <label htmlFor="" className='createSayisalLotoLabels'>Numara 3</label>
-                        <label htmlFor="" className='createSayisalLotoLabels'>Numara 4</label>
-                        <label htmlFor="" className='createSayisalLotoLabels'>Numara 5</label>
-                        <label htmlFor="" className='createSayisalLotoLabels'>Numara 6</label>
-                    </Stack>
-                    <Stack direction="row" mb={5}>
-                        <input type="text" className='createSayisalLotoNumbersInput' />
-                        <input type="text" className='createSayisalLotoNumbersInput' />
-                        <input type="text" className='createSayisalLotoNumbersInput' />
-                        <input type="text" className='createSayisalLotoNumbersInput' />
-                        <input type="text" className='createSayisalLotoNumbersInput' />
-                        <input type="text" className='createSayisalLotoNumbersInput' />
+                <Box>
+                    <Stack direction="row" mt={5} mb={2}>
+                        {[...Array(6)].map((_, index) => (
+                            <label key={index} htmlFor="" className='createSayisalLotoLabels'>
+                                Numara {index + 1}
+                                <input
+                                    type="text"
+                                    className='createSayisalLotoNumbersInput'
+                                    value={numbers[index]}
+                                    onChange={(e) => handleNumberChange(index, e.target.value)}
+                                />
+                            </label>
+                        ))}
                     </Stack>
                     <Stack direction="row" mt={5} mb={2}>
                         <h6>Tarih</h6>
                     </Stack>
                     <Stack mb={5}>
                         <LocalizationProvider dateAdapter={AdapterDayjs}>
-                            <DatePicker className='createSayisalLotoDatePicker'/>
+                            <DatePicker
+                                className='createSayisalLotoDatePicker'
+                                value={date}
+                                onChange={handleDateChange}
+                            />
                         </LocalizationProvider>
                     </Stack>
                     <Stack className='createSayisalLotoButton'>
-                        <Button variant='contained'>Kaydet</Button>
+                        <Button variant='contained' onClick={handleSave}>Kaydet</Button>
                     </Stack>
                 </Box>
-            )
-        }
-    </Box>
-  )
+            )}
+        </Box>
+    );
 }
 
-export default CreateSayisalLoto
+export default CreateSayisalLoto;
