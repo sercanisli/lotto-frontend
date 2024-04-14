@@ -33,7 +33,11 @@ const CreateSayisalLoto = () => {
         let formattedDate = null;
     
         if (date) {
-            formattedDate = date.toISOString().substring(0, 19);
+            const dateObject = new Date(date); 
+            const year = dateObject.getFullYear();
+            const month = (dateObject.getMonth() + 1).toString().padStart(2, '0');
+            const day = dateObject.getDate().toString().padStart(2, '0');
+            formattedDate = `${year}-${month}-${day}`;
         }
     
         const sayisalLoto = {
@@ -46,6 +50,7 @@ const CreateSayisalLoto = () => {
         setNumbers(Array(6).fill(''));
         setDate(null);
     }
+    
     
 
     return (
