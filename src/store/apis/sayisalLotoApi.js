@@ -40,10 +40,20 @@ const sayisalLotoApi = createApi ({
                         method : 'GET'
                     }
                 }
-            })
+            }),
+            createSayisalLoto: builder.mutation({
+                query: (sayisalLoto) => ({
+                    url: '/api/sayisalloto', 
+                    method: 'POST', 
+                    body: sayisalLoto,
+                    headers: {
+                        'Content-Type': 'application/json',
+                    },
+                }),
+            }),
         };
     },
 });
 
-export const { useFetchSayisalLotoQuery, useGetRandomNumbersForSayisalLotoQuery, useGetSayisalLotoLastItemQuery } = sayisalLotoApi;
+export const { useFetchSayisalLotoQuery, useGetRandomNumbersForSayisalLotoQuery, useGetSayisalLotoLastItemQuery, useCreateSayisalLotoMutation } = sayisalLotoApi;
 export { sayisalLotoApi };
