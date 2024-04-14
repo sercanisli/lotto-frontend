@@ -1,6 +1,8 @@
 import React from 'react'
-import { Stack, Card, CardContent, Typography, Grid } from '@mui/material';
+import { Stack, Card, CardContent, Typography, Grid, Button } from '@mui/material';
 import '../styles/adminSayisalLotoItem.css';
+import CloudUploadIcon from '@mui/icons-material/CloudUpload';
+import DeleteIcon from '@mui/icons-material/Delete';
 import {formatDate} from './dateUtils';
 
 function AdminSayisalLotoItem({sayisalLoto}) {
@@ -11,6 +13,9 @@ function AdminSayisalLotoItem({sayisalLoto}) {
                 <Stack direction="row" className='dateStackAdminSayisalLotoItem'>
                     <Typography className='dateAdminSayisalLotoItem'>
                         Tarih: {formatDate(sayisalLoto.Date)}
+                    </Typography>
+                    <Typography className='idAdminSayisalLotoItem'>
+                        Id: {sayisalLoto.Id}
                     </Typography>
                 </Stack>
                 <Typography>
@@ -23,6 +28,10 @@ function AdminSayisalLotoItem({sayisalLoto}) {
                         <p>{sayisalLoto.Numbers[5]}</p>
                     </Stack>
                 </Typography>
+                <Stack direction="row" className='buttonsAdminSayisalLotoItem'>
+                    <Button variant='contained' startIcon={<CloudUploadIcon />}>Güncelle</Button>
+                    <Button variant='contained' startIcon={<DeleteIcon />} color="error">Sil</Button>
+                </Stack>
             </CardContent>
         </Card>
     </Grid>

@@ -10,6 +10,7 @@ import {Typography, Grid, Button } from '@mui/material';
 import AdminSayisalLotoItem from './AdminSayisalLotoItem'; 
 import '../styles/adminSayisalLoto.css';
 import CreateSayisalLoto from './CreateSayisalLoto';
+import AddIcon from '@mui/icons-material/Add';
 
 const AdminSayisalLoto = () => {
 
@@ -59,7 +60,7 @@ const AdminSayisalLoto = () => {
           <CreateSayisalLoto />
         ) : (
           <Box>
-            <Button variant='outlined' onClick={handleClick}>Yeni Çekiliş Ekle</Button>
+            <Button variant='outlined' startIcon={<AddIcon />}  onClick={handleClick}>Yeni Çekiliş Ekle</Button>
             <Grid container spacing={2}>
               <Grid item xs={12} md={12}>
                 <Typography className='headlinesAdminSayisalLoto' variant='h5' >Çekilişler</Typography>

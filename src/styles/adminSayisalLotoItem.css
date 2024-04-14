@@ -10,22 +10,25 @@
      margin-bottom: 15px; 
      border: 1px solid rgb(170, 166, 166);
      border-radius: 10px !important;
-     height: 115px;
+     height: 125px;
  }
  
  .dateStackAdminSayisalLotoItem{
-    display: flex;
-    flex-wrap: wrap;
-    align-items: center;
-    margin-top: 10px;
+   display: flex;
+   justify-content: space-between;
+   width: 100%;
  }
  
  .dateAdminSayisalLotoItem {
-    display: flex;
-    justify-content: end;
-    padding-right: 15px;
- }
+   display: flex;
+   justify-content: flex-start; 
+}
 
+.idAdminSayisalLotoItem {
+   display: flex;
+   justify-content: flex-end; 
+}
+ 
  .numbersAdminSayisalLotoItem {
    display: flex;
     align-items: center;
@@ -44,5 +47,11 @@
     width: 35px !important;
     height: 35px !important;
     border-radius: 50%;
+ }
+
+ .buttonsAdminSayisalLotoItem {
+   display: flex;
+    justify-content: space-between; 
+    width: 100%;
  }
  
