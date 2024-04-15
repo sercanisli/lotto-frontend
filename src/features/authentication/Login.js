@@ -17,18 +17,15 @@ const Login = () => {
     const [login, {isLoading}] = useLoginMutation()
     const dispatch = useDispatch()
 
-    // useEffect(() => {
-    //     userRef.current.focus();
-    // }, [])
-
     useEffect(() => {
         setErrMsg('');
     }, [user, pwd])
 
+
     const handleSubmit = async (event) => {
         event.preventDefault()
 
-        const credentials = {
+        const credentials = { 
             username: user,
             password: pwd
         };
@@ -51,7 +48,6 @@ const Login = () => {
             } else {
                 setErrMsg('Login Failde');
             }
-            // errRef.current.focus();
         }
     }
 

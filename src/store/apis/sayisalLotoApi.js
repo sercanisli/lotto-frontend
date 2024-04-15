@@ -42,10 +42,16 @@ const sayisalLotoApi = createApi ({
                 }
             }),
             createSayisalLoto: builder.mutation({
+                invalidatesTags: (result, error, sayisalLoto) => {
+                    return [{type:'SayisalLoto', id: sayisalLoto.id}];
+                },
                 query: (sayisalLoto) => ({
                     url: '/api/sayisalloto', 
                     method: 'POST', 
-                    body: sayisalLoto,
+                    body: {
+                        numbers:sayisalLoto.numbers,
+                        date: sayisalLoto.date
+                    },
                     headers: {
                         'Content-Type': 'application/json',
                     },

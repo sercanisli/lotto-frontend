@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import {useCreateSayisalLotoMutation} from '../store/apis/sayisalLotoApi';
 import { IconButton, Stack, Button } from '@mui/material';
 import ArrowBackIcon from '@mui/icons-material/ArrowBack';
 import Box from '@mui/material/Box';
@@ -13,6 +14,9 @@ const CreateSayisalLoto = () => {
     const [arrowBackIcon, setArrowBackIcon] = useState(true);
     const [numbers, setNumbers] = useState(Array(6).fill(''));
     const [date, setDate] = useState(null);
+
+    const [createSayisalLoto, { isLoading, isError, isSuccess, error }] = useCreateSayisalLotoMutation();
+
 
     const handleClick = () => {
         setAdminSayisalLotoPage(true);
@@ -29,7 +33,7 @@ const CreateSayisalLoto = () => {
         setDate(newDate);
     }
 
-    const handleSave = () => {
+    const handleSave = async () => {
         let formattedDate = null;
     
         if (date) {
@@ -46,9 +50,14 @@ const CreateSayisalLoto = () => {
         };
     
         console.log(sayisalLoto);
-    
-        setNumbers(Array(6).fill(''));
-        setDate(null);
+
+        try {
+            await createSayisalLoto(sayisalLoto).unwrap();
+            setNumbers(Array(6).fill(''));
+            setDate(null);
+        } catch (error) {
+            console.error('Create operation failed:', error);
+        }
     }
     
     
