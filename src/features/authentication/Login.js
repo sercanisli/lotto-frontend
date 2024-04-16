@@ -31,12 +31,11 @@ const Login = () => {
         };
 
         try {
-            const userData = await login(credentials).unwrap()
-            console.log(userData);
+            const userData = await login(credentials).unwrap();
             dispatch(setCredentials({...userData,user}))
             setUser('')
             setPwd('')
-            navigate('/')
+            navigate('/admin')
         } catch (error) {
             if(!error?.response) {
                 setErrMsg('No Server Response'); 
@@ -46,7 +45,7 @@ const Login = () => {
             } else if (error.response?.status === 401) {
                 setErrMsg('Unauthorized');
             } else {
-                setErrMsg('Login Failde');
+                setErrMsg('Login Failed');
             }
         }
     }

@@ -17,21 +17,19 @@ export const store = configureStore({
         [sansTopuApi.reducerPath]: sansTopuApi.reducer,
         [winningNumbersApi.reducerPath]: winningNumbersApi.reducer,
         [aboutUsApi.reducerPath]: aboutUsApi.reducer,
-        [authenticationApi.reducerPath] : authenticationApi.reducer,
-        auth : authReducer
+        auth: authReducer
     },
-    middleware: (getDefaultMiddleware) => {
-        return getDefaultMiddleware()
+    middleware:getDefaultMiddleware =>
+        getDefaultMiddleware()
             .concat(superLotoApi.middleware)
             .concat(sayisalLotoApi.middleware)
             .concat(onNumaraApi.middleware)
             .concat(sansTopuApi.middleware)
             .concat(winningNumbersApi.middleware)
             .concat(aboutUsApi.middleware)
-            .concat(authenticationApi.middleware);
-    },
+            .concat(authenticationApi.middleware),
     devTools:true
-});
+})
 
 setupListeners(store.dispatch);
 
