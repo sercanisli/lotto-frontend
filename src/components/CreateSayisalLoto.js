@@ -17,7 +17,6 @@ const CreateSayisalLoto = () => {
 
     const [createSayisalLoto, { isLoading, isError, isSuccess, error }] = useCreateSayisalLotoMutation();
 
-
     const handleClick = () => {
         setAdminSayisalLotoPage(true);
         setArrowBackIcon(false);
