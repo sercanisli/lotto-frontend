@@ -1,11 +1,11 @@
 import React, { useState } from 'react'
-import { IconButton, Stack, Button } from '@mui/material';
-import ArrowBackIcon from '@mui/icons-material/ArrowBack';
+import { Stack, Button } from '@mui/material';
 import Box from '@mui/material/Box';
 import AdminSayisalLoto from './AdminSayisalLoto';
 import { AdapterDayjs } from '@mui/x-date-pickers/AdapterDayjs';
 import { LocalizationProvider } from '@mui/x-date-pickers/LocalizationProvider';
 import { DatePicker } from '@mui/x-date-pickers/DatePicker';
+import '../styles/updateSayisalLoto.css';
 
 const UpdateSayisalLoto = () => {
   const [adminSayisalLotoPage, setAdminSayisalLotoPage] = useState(false);
@@ -34,18 +34,18 @@ const UpdateSayisalLoto = () => {
 
   return (
     <Box>
-      
       {adminSayisalLotoPage ? (
         <AdminSayisalLoto />
       ): (
         <Box>
           <Stack direction="row" mt={5} mb={2}>
             {[...Array(6)].map((_, index) => (
-              <label htmlFor="" key={index}>
+              <label htmlFor="" key={index} className='updateSayisalLotoLabels'>
                 Numara {index + 1}
                 <input 
                   type="text" 
                   value={numbers[index]}
+                  className='updateSayisalLotoNumbersInput'
                   onChange={(e) => handleNumberChange(index, e.target.value)}
                 />
               </label>
@@ -57,12 +57,13 @@ const UpdateSayisalLoto = () => {
           <Stack mb={5}>
             <LocalizationProvider dateAdapter={AdapterDayjs}>
               <DatePicker
+                className='updateSayisalLotoDatePicker'
                 value={date}
                 onChange={handleDateChange} 
               />
             </LocalizationProvider>
           </Stack>
-          <Stack>
+          <Stack className='updateSayisalLotoButton'>
             <Button variant='outlined' onClick={handleSave}>Kaydet</Button>
           </Stack>
         </Box>
