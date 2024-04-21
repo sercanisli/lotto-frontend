@@ -7,7 +7,8 @@ import { LocalizationProvider } from '@mui/x-date-pickers/LocalizationProvider';
 import { DatePicker } from '@mui/x-date-pickers/DatePicker';
 import '../styles/updateSayisalLoto.css';
 
-const UpdateSayisalLoto = () => {
+const UpdateSayisalLoto = ({sayisalLoto}) => {
+  console.log(sayisalLoto)
   const [adminSayisalLotoPage, setAdminSayisalLotoPage] = useState(false);
   const [arrowBackIcon, setArrowBackIcon] = useState(true);
   const [numbers, setNumbers] = useState(Array(6).fill(''));
