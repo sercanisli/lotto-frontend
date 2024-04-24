@@ -6,17 +6,17 @@ import { AdapterDayjs } from '@mui/x-date-pickers/AdapterDayjs';
 import { LocalizationProvider } from '@mui/x-date-pickers/LocalizationProvider';
 import { DatePicker } from '@mui/x-date-pickers/DatePicker';
 import '../styles/updateSayisalLoto.css';
+import './dateUtils'
+import { formatDate } from './dateUtils';
 
 const UpdateSayisalLoto = ({sayisalLoto}) => {
   console.log(sayisalLoto)
   const [adminSayisalLotoPage, setAdminSayisalLotoPage] = useState(false);
-  const [arrowBackIcon, setArrowBackIcon] = useState(true);
   const [numbers, setNumbers] = useState(Array(6).fill(''));
   const [date, setDate] = useState(null);
 
   const handleClick = () => {
     setAdminSayisalLotoPage(true);
-    setArrowBackIcon(false);
   }
 
   const handleNumberChange = (index, value) => {
@@ -30,7 +30,7 @@ const UpdateSayisalLoto = ({sayisalLoto}) => {
   }
 
   const handleDateChange = (newDate) => {
-    setDate(newDate);
+    setDate(formatDate(newDate));
   }
 
   return (
