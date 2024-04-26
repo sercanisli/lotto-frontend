@@ -23,6 +23,16 @@ const sayisalLotoApi = createApi ({
                     }; 
                 },
             }),
+            fetchOneSayisalLoto:builder.query({
+                providesTags:['SayisalLoto'],
+                query : (id) => {
+                    debugger;
+                    return{
+                        url:`api/sayisalloto/GetOneNumbersArrayByIdForSayisalLotoAsync/${id}`,
+                        method:'GET',
+                    };
+                },
+            }),
             getRandomNumbersForSayisalLoto:builder.query({
                 providesTags:['SayisalLoto'],
                 query: () => {
@@ -61,5 +71,5 @@ const sayisalLotoApi = createApi ({
     },
 });
 
-export const { useFetchSayisalLotoQuery, useGetRandomNumbersForSayisalLotoQuery, useGetSayisalLotoLastItemQuery, useCreateSayisalLotoMutation } = sayisalLotoApi;
+export const { useFetchSayisalLotoQuery, useFetchOneSayisalLotoQuery, useGetRandomNumbersForSayisalLotoQuery, useGetSayisalLotoLastItemQuery, useCreateSayisalLotoMutation } = sayisalLotoApi;
 export { sayisalLotoApi };

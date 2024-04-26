@@ -1,19 +1,34 @@
-import React, { useState } from 'react'
+import React, { useState, useEffect } from 'react';
 import { Stack, Button } from '@mui/material';
+import {useFetchOneSayisalLotoQuery} from '../store/apis/sayisalLotoApi'
 import Box from '@mui/material/Box';
 import AdminSayisalLoto from './AdminSayisalLoto';
 import { AdapterDayjs } from '@mui/x-date-pickers/AdapterDayjs';
 import { LocalizationProvider } from '@mui/x-date-pickers/LocalizationProvider';
 import { DatePicker } from '@mui/x-date-pickers/DatePicker';
 import '../styles/updateSayisalLoto.css';
-import './dateUtils'
+import './dateUtils';
+// import {stringToDate} from './stringToDate';
 import { formatDate } from './dateUtils';
 
-const UpdateSayisalLoto = ({sayisalLoto}) => {
-  console.log(sayisalLoto)
+const UpdateSayisalLoto = ({ sayisalLoto }) => {
   const [adminSayisalLotoPage, setAdminSayisalLotoPage] = useState(false);
   const [numbers, setNumbers] = useState(Array(6).fill(''));
   const [date, setDate] = useState(null);
+
+
+  useEffect(() => {
+    if (sayisalLoto) {
+      setNumbers(sayisalLoto.Numbers || Array(6).fill('')); 
+      // setDate(sayisalLoto.Date || null); 
+    }
+  }, [sayisalLoto]);
+
+  useEffect(() => {
+    if (numbers.every(num => num !== '') && date !== null) {
+      setAdminSayisalLotoPage(true);
+    }
+  }, [numbers, date]);
 
   const handleClick = () => {
     setAdminSayisalLotoPage(true);
@@ -26,18 +41,22 @@ const UpdateSayisalLoto = ({sayisalLoto}) => {
   }
 
   const handleSave = () => {
-
+    // Kaydetme işlemleri burada yapılabilir
   }
 
   const handleDateChange = (newDate) => {
     setDate(formatDate(newDate));
   }
 
+  console.log(sayisalLoto);
+  console.log(numbers);
+  console.log(date);
+
   return (
     <Box>
       {adminSayisalLotoPage ? (
         <AdminSayisalLoto />
-      ): (
+      ) : (
         <Box>
           <Stack direction="row" mt={5} mb={2}>
             {[...Array(6)].map((_, index) => (
@@ -73,4 +92,4 @@ const UpdateSayisalLoto = ({sayisalLoto}) => {
   )
 }
 
-export default UpdateSayisalLoto
+export default UpdateSayisalLoto;
